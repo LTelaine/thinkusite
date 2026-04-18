@@ -551,30 +551,6 @@
       border: 1px solid #F5B7B1;
     }
 
-    /* ===== Scroll to Form Button (Mobile Float) ===== */
-    .fab-cta {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 200;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 50px;
-      padding: 14px 24px;
-      font-size: 16px;
-      font-weight: 700;
-      font-family: 'Noto Sans TC', sans-serif;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(245, 96, 10, 0.4);
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-
-    .fab-cta:hover {
-      transform: translateY(-2px);
-    }
 
     /* ===== App Card Slide In Right ===== */
     @keyframes slideInRight {
@@ -831,8 +807,8 @@
         grid-template-columns: 1fr;
       }
 
-      .fab-cta {
-        display: block;
+      .scroll-top {
+        display: none !important;
       }
     }
 
@@ -1077,11 +1053,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Mobile FAB -->
-  <a href="#formSection" class="fab-cta">
-    <i class="fa-solid fa-pen-to-square"></i> 立即填寫
-  </a>
 
   <!-- Scroll to Top -->
   <button class="scroll-top" id="scrollTopBtn" aria-label="回到頂部">
