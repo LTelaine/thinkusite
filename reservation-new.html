@@ -265,6 +265,8 @@
       justify-content: center;
       gap: 60px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 3;
     }
 
     .footer-item {
@@ -783,21 +785,21 @@
       }
 
       .deco-pumpkin {
-        width: 140px;
-        left: -20px;
-        bottom: -80px;
+        width: 120px;
+        left: -30px;
+        bottom: -30px;
       }
 
       .deco-broccoli {
-        width: 110px;
-        right: -10px;
+        width: 90px;
+        right: -25px;
         top: 10px;
       }
 
       .deco-tomato {
-        width: 130px;
-        right: -15px;
-        bottom: -90px;
+        width: 110px;
+        right: -30px;
+        bottom: -35px;
       }
 
 
@@ -837,6 +839,7 @@
     /* Smooth scroll */
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
   </style>
 </head>
