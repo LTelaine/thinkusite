@@ -139,25 +139,23 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      border-radius: 50px;
-      padding: 18px 40px;
-      font-size: 1.15rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
+      background: var(--primary-bg);
+      color: var(--text-cta);
+      border: 1px solid var(--primary-border);
+      border-radius: 16px;
+      padding: 12px 28px;
+      font-size: 18px;
+      font-weight: 600;
       font-family: 'Noto Sans TC', sans-serif;
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(245, 96, 10, 0.3);
+      box-shadow: 0 3.5px 10px rgba(233, 86, 12, 0.2);
       text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .hero-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 25px rgba(245, 96, 10, 0.4);
-      background: #d94f00;
+      box-shadow: 0 6px 16px rgba(233, 86, 12, 0.35);
     }
 
     .hero-cta .arrow {
@@ -975,6 +973,17 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label class="field-label" for="budget">目前每月平均教育投入約為？</label>
+            <select id="budget" name="budget">
+              <option value="">請選擇</option>
+              <option value="under_3000">NT$3,000 以下</option>
+              <option value="3000_8000">NT$3,000－8,000</option>
+              <option value="8000_15000">NT$8,000－15,000</option>
+              <option value="over_15000">NT$15,000 以上</option>
+            </select>
+          </div>
+
           <div class="section-title">
             <span class="section-index">3</span>
             使用需求與期待
@@ -992,6 +1001,50 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label class="field-label">未來 ThinkU 若結合 LTrust 學習平台推出「家長專屬功能」，哪一項最能吸引您付費升級？</label>
+            <div class="field-note" style="margin-bottom: 12px;">此為單選題，請選擇您最看重的一項。</div>
+            <div class="choice-grid single-col">
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_blindspot" value="blindspot">
+                <label for="ltrust_blindspot">
+                  <span class="choice-title">學習盲點統整報告</span>
+                  <span class="choice-desc">根據孩子向 AI 提問的紀錄，統整出他們最常卡關的觀念。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_subtraction" value="subtraction">
+                <label for="ltrust_subtraction">
+                  <span class="choice-title">減法學習成效追蹤</span>
+                  <span class="choice-desc">記錄孩子跳過了多少不必要的雜訊，節省了多少無效刷題的時間。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_rhythm" value="rhythm">
+                <label for="ltrust_rhythm">
+                  <span class="choice-title">學習與思考節奏診斷</span>
+                  <span class="choice-desc">分析孩子在面對難題時，是習慣直接要答案，還是願意跟著 AI 引導思考。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_guide" value="guide">
+                <label for="ltrust_guide">
+                  <span class="choice-title">AI 專屬陪讀指引</span>
+                  <span class="choice-desc">提供家長一份如何配合 AI 輔助孩子學習的具體建議與溝通心法。</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">若 ThinkU 正式推出，您可接受的年費區間為何？</label>
+            <div class="choice-grid">
+              <div class="choice-item"><input type="radio" name="price" id="price_1" value="under_1000"><label for="price_1"><span class="choice-title">NT$1,000 以下</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_2" value="1000_2000"><label for="price_2"><span class="choice-title">NT$1,000－2,000</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_3" value="2000_3000"><label for="price_3"><span class="choice-title">NT$2,000－3,000</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_4" value="over_3000"><label for="price_4"><span class="choice-title">NT$3,000 以上</span></label></div>
+            </div>
+          </div>
 
           <div class="cta-box">
             <button class="btn-submit" type="submit">確認送出，完成預約</button>
@@ -1065,7 +1118,10 @@
         phone: document.getElementById('phone').value.trim(),
         grade: document.getElementById('grade').value,
         cram: getCheckedValue('cram'),
-        subjects: getCheckedValues('subject')
+        budget: document.getElementById('budget').value,
+        subjects: getCheckedValues('subject'),
+        ltrust_feature: getCheckedValue('ltrust_feature'),
+        price: getCheckedValue('price')
       };
 
       if (!formData.parent_name || !formData.email || !formData.grade) {
@@ -1074,7 +1130,8 @@
       }
 
       pushEvent('waitlist_submit_click', {
-        grade: formData.grade
+        grade: formData.grade,
+        ltrust_preference: formData.ltrust_feature
       });
 
       const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSe219MSo2rVjMu8M0darQ5EiEjVScOsra2GzdM0Smroyg2bEw/formResponse";
@@ -1082,7 +1139,15 @@
       const valueMap = {
         grade: { junior: "國中", prep_high: "準備升高中", high_1: "高一", high_2: "高二", high_3: "高三" },
         cram: { none: "目前沒有補習", class: "補習班", tutor: "家教", online: "線上課程" },
-        subject: { math: "數學", english: "英文", physics: "物理", chemistry: "化學", biology: "生物", chinese: "國文" }
+        budget: { under_3000: "NT$3,000 以下", "3000_8000": "NT$3,000－8,000", "8000_15000": "NT$8,000－15,000", over_15000: "NT$15,000 以上" },
+        subject: { math: "數學", english: "英文", physics: "物理", chemistry: "化學", biology: "生物", chinese: "國文" },
+        price: { under_1000: "NT$1,000 以下", "1000_2000": "NT$1,000－2,000", "2000_3000": "NT$2,000－3,000", over_3000: "NT$3,000 以上" },
+        ltrust_feature: {
+          blindspot: "學習盲點統整報告",
+          subtraction: "減法學習成效追蹤",
+          rhythm: "學習與思考節奏診斷",
+          guide: "AI 專屬陪讀指引"
+        }
       };
 
       const formDataGoogle = new FormData();
@@ -1091,12 +1156,17 @@
       formDataGoogle.append("entry.1555309747", formData.phone);
       formDataGoogle.append("entry.233635302", valueMap.grade[formData.grade] || "");
       formDataGoogle.append("entry.608173105", valueMap.cram[formData.cram] || "");
+      formDataGoogle.append("entry.1970214267", valueMap.budget[formData.budget] || "");
+
       formData.subjects.forEach(subject => {
         const mapped = valueMap.subject[subject];
         if (mapped) {
           formDataGoogle.append("entry.1887397985", mapped);
         }
       });
+
+      formDataGoogle.append("entry.2054707673", valueMap.ltrust_feature[formData.ltrust_feature] || "");
+      formDataGoogle.append("entry.1642947021", valueMap.price[formData.price] || "");
 
       fetch(formURL, {
         method: "POST",
