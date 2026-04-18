@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThinkU｜募資預約通知</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #f5600a;
+      --primary-light: #ffa856;
+      --primary-bg: #fee8da;
+      --primary-border: #fcc6a7;
+      --text-dark: #000000;
+      --text-muted: #7c7372;
+      --text-cta: #d94f00;
+      --footer-bg: #595444;
+      --white: #ffffff;
+      --red-accent: #e34931;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f9f5f0;
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== Header ===== */
+    .header {
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-logo img {
+      height: 40px;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--text-cta);
+      border: none;
+      border-radius: 16px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 3.5px 10px rgba(233, 86, 12, 0.3);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .header-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(233, 86, 12, 0.4);
+    }
+
+    /* ===== Hero Row (左文右圖容器) ===== */
+    .hero-row {
+      background: var(--white);
+      padding: 60px 40px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-logo {
+      width: 320px;
+      max-width: 80%;
+      margin-bottom: 30px;
+    }
+
+    .hero-headline {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .hero-headline .highlight {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle-bold {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 30px;
+    }
+
+    .hero-subtitle-bold span {
+      background: var(--primary-light);
+      padding: 4px 8px;
+      border-radius: 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-bg);
+      color: var(--text-cta);
+      border: 1px solid var(--primary-border);
+      border-radius: 16px;
+      padding: 12px 28px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 3.5px 10px rgba(233, 86, 12, 0.2);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(233, 86, 12, 0.35);
+    }
+
+    .hero-cta .arrow {
+      font-size: 16px;
+    }
+
+    /* ===== 1440px+ 左文右圖 ===== */
+    @media (min-width: 1440px) {
+      .hero-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        padding: 60px 80px 60px;
+        min-height: 700px;
+        text-align: left;
+      }
+
+      .hero-text {
+        align-items: flex-start;
+        flex: 0 1 550px;
+      }
+
+      .hero-images {
+        flex: 0 0 auto;
+        margin-top: 0;
+        gap: 24px;
+        flex-wrap: nowrap;
+      }
+
+    }
+
+    .app-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--primary-light);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .app-card img {
+      display: block;
+      width: 290px;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    .app-label {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--red-accent);
+      border-radius: 16px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-cta);
+      box-shadow: 0 3.5px 10px rgba(255,255,255,0.5);
+      white-space: nowrap;
+    }
+
+    .app-label i {
+      color: var(--red-accent);
+      font-size: 18px;
+    }
+
+    /* ===== Characters ===== */
+    .characters {
+      position: relative;
+      background: var(--white);
+      overflow: hidden;
+    }
+
+    .character {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .char-pumpkin {
+      left: -30px;
+      bottom: -20px;
+      width: 320px;
+    }
+
+    .char-broccoli {
+      right: -20px;
+      top: -120px;
+      width: 240px;
+    }
+
+    .char-tomato {
+      right: -10px;
+      bottom: -30px;
+      width: 260px;
+    }
+
+    /* ===== Footer Bar ===== */
+    .footer-bar {
+      background: var(--footer-bg);
+      padding: 24px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .footer-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-size: 18px;
+    }
+
+    .footer-item i {
+      font-size: 20px;
+      color: #ffbf00;
+    }
+
+    .footer-item .label {
+      font-weight: 600;
+      color: #ffbf00;
+    }
+
+    .footer-item .desc {
+      font-weight: 500;
+    }
+
+    /* ===== Form Section ===== */
+    .form-section {
+      background: #f4f7fb;
+      padding: 60px 20px 80px;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .form-header h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #182329;
+      margin-bottom: 12px;
+    }
+
+    .form-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 40px;
+    }
+
+    .intro-box {
+      background: #FFF5EE;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin-bottom: 35px;
+    }
+
+    .intro-box strong {
+      color: var(--text-cta);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .intro-box p {
+      font-size: 1rem;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 40px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #F1F2F6;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #182329;
+    }
+
+    .section-index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .form-group {
+      margin-bottom: 28px;
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .field-note {
+      margin-top: 8px;
+      color: #B2BEC3;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      border: 2px solid #DFE6E9;
+      background: #FAFAFA;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      font-family: 'Noto Sans TC', sans-serif;
+      transition: all 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #FFF;
+      box-shadow: 0 0 0 4px rgba(245, 96, 10, 0.2);
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .choice-grid.single-col {
+      grid-template-columns: 1fr;
+    }
+
+    .choice-item { position: relative; }
+    .choice-item input { position: absolute; opacity: 0; pointer-events: none; }
+
+    .choice-item label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 60px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #FFF;
+      border: 2px solid #DFE6E9;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .choice-title {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .choice-desc {
+      font-size: 0.85rem;
+      margin-top: 6px;
+      color: #999;
+    }
+
+    .choice-title::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border: 2px solid #B2BEC3;
+      border-radius: 50%;
+      display: inline-block;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .choice-item input[type="checkbox"] + label .choice-title::before {
+      border-radius: 6px;
+    }
+
+    .choice-item label:hover {
+      border-color: #A4B0BE;
+      background: #F8FAFC;
+    }
+
+    .choice-item input:checked + label {
+      background: #FFF5EE;
+      border-color: var(--primary);
+      color: var(--text-cta);
+      box-shadow: 0 4px 12px rgba(245, 96, 10, 0.15);
+    }
+
+    .choice-item input:checked + label .choice-title { color: var(--text-cta); }
+    .choice-item input:checked + label .choice-desc { color: #555; }
+
+    .choice-item input:checked + label .choice-title::before {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      box-shadow: inset 0 0 0 4px #FFF;
+    }
+
+    .cta-box {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 2px dashed #DFE6E9;
+    }
+
+    .btn-submit {
+      width: 100%;
+      border: none;
+      border-radius: 50px;
+      background: var(--primary);
+      color: #FFF;
+      padding: 18px 20px;
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(245, 96, 10, 0.3);
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(245, 96, 10, 0.4);
+      background: #d94f00;
+    }
+
+    .privacy-note {
+      text-align: center;
+      margin-top: 16px;
+      color: #B2BEC3;
+      font-size: 0.85rem;
+    }
+
+    .status-message {
+      display: none;
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .status-message.success {
+      display: block;
+      background: #E8F8F5;
+      color: #00B894;
+      border: 1px solid #A3E4D7;
+    }
+
+    .status-message.error {
+      display: block;
+      background: #FDEDEC;
+      color: #FF7675;
+      border: 1px solid #F5B7B1;
+    }
+
+    /* ===== Scroll to Form Button (Mobile Float) ===== */
+    .fab-cta {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 200;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(245, 96, 10, 0.4);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .fab-cta:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ===== App Card Slide In Right ===== */
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(80px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      animation: slideInRight 0.8s ease-out forwards;
+    }
+
+    /* ===== Hero Content Fade In ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-fade {
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    .hero-fade:nth-child(1) { animation-delay: 0.1s; }
+    .hero-fade:nth-child(2) { animation-delay: 0.3s; }
+    .hero-fade:nth-child(3) { animation-delay: 0.5s; }
+    .hero-fade:nth-child(4) { animation-delay: 0.7s; }
+    .hero-fade:nth-child(5) { animation-delay: 0.9s; }
+
+    /* ===== Scroll to Top Button ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 200;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(245, 96, 10, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      background: #d94f00;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Desktop Decorative Characters ===== */
+    .hero-wrapper {
+      position: relative;
+    }
+
+    /* 進場動畫 */
+    @keyframes slideInPumpkin {
+      from { opacity: 0; transform: translate(-120px, 80px) rotate(-45deg) scale(0.5); }
+      to   { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    }
+
+    @keyframes slideInBroccoli {
+      from { opacity: 0; transform: translate(120px, -80px) rotate(45deg) scale(0.5); }
+      to   { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    }
+
+    @keyframes slideInTomato {
+      from { opacity: 0; transform: translate(120px, 80px) rotate(45deg) scale(0.5); }
+      to   { opacity: 1; transform: translate(0, 0) rotate(0deg) scale(1); }
+    }
+
+    /* 持續漂浮動畫 */
+    @keyframes floatUpDown1 {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-12px); }
+    }
+
+    @keyframes floatUpDown2 {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-16px); }
+    }
+
+    @keyframes floatUpDown3 {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+
+    /* 插圖容器 - 預設 absolute 在 hero-wrapper 中 */
+    .deco-char {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: opacity 0.4s;
+    }
+
+    /* 進場結束後加上漂浮 */
+    .deco-char.floating {
+      opacity: 1;
+      animation: none;
+    }
+
+    .deco-pumpkin.floating img  { animation: floatUpDown1 3.5s ease-in-out infinite; }
+    .deco-broccoli.floating img { animation: floatUpDown2 4s ease-in-out infinite 0.5s; }
+    .deco-tomato.floating img   { animation: floatUpDown3 3.8s ease-in-out infinite 1s; }
+
+    .deco-char img {
+      width: 100%;
+      display: block;
+    }
+
+    .deco-pumpkin {
+      left: -10px;
+      bottom: -140px;
+      width: 300px;
+      animation-name: slideInPumpkin;
+      animation-delay: 0.3s;
+    }
+
+    .deco-broccoli {
+      right: 0;
+      top: 40px;
+      width: 220px;
+      animation-name: slideInBroccoli;
+      animation-delay: 0.5s;
+    }
+
+    .deco-tomato {
+      right: -10px;
+      bottom: -150px;
+      width: 260px;
+      animation-name: slideInTomato;
+      animation-delay: 0.7s;
+    }
+
+
+    /* ===== MOBILE RWD ===== */
+    @media (max-width: 768px) {
+      .header {
+        padding: 10px 16px;
+      }
+
+      .header-logo img {
+        height: 35px;
+      }
+
+      .header-cta {
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 12px;
+      }
+
+      .hero-row {
+        padding: 30px 16px 30px;
+      }
+
+      .hero-logo {
+        width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .hero-headline {
+        font-size: 26px;
+        line-height: 1.5;
+      }
+
+      .hero-subtitle,
+      .hero-subtitle-bold {
+        font-size: 15px;
+      }
+
+      .hero-cta {
+        font-size: 15px;
+        padding: 10px 22px;
+      }
+
+      .hero-images {
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .app-card img {
+        width: 155px;
+        height: 250px;
+      }
+
+      .app-label {
+        padding: 6px 14px;
+        font-size: 14px;
+        bottom: 12px;
+      }
+
+      .deco-pumpkin {
+        width: 140px;
+        left: -20px;
+        bottom: -80px;
+      }
+
+      .deco-broccoli {
+        width: 110px;
+        right: -10px;
+        top: 10px;
+      }
+
+      .deco-tomato {
+        width: 130px;
+        right: -15px;
+        bottom: -90px;
+      }
+
+
+      .footer-bar {
+        padding: 18px 20px;
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-item {
+        font-size: 15px;
+      }
+
+      .form-section {
+        padding: 40px 15px 60px;
+      }
+
+      .card {
+        padding: 25px 20px;
+        border-radius: 18px;
+      }
+
+      .form-header h2 {
+        font-size: 1.6rem;
+      }
+
+      .choice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-cta {
+        display: block;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header-logo">
+      <img src="image/ThinkU_Logo_AlphaWhite.png" alt="ThinkU">
+    </div>
+    <a href="#formSection" class="header-cta">
+      立即填寫抽星巴克
+    </a>
+  </header>
+
+  <!-- ===== Hero + App Preview Wrapper ===== -->
+  <div class="hero-wrapper">
+    <!-- Decorative Characters -->
+    <div class="deco-char deco-pumpkin"><img src="image/阿南.png" alt=""></div>
+    <div class="deco-char deco-broccoli"><img src="image/少椰.png" alt=""></div>
+    <div class="deco-char deco-tomato"><img src="image/番仔.png" alt=""></div>
+
+    <!-- Hero Content Row (左文右圖 at >=1440px) -->
+    <section class="hero-row">
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <img src="image/ThinkU_Logo.png" alt="ThinkU Logo" class="hero-logo hero-fade">
+
+        <h1 class="hero-headline hero-fade">
+          孩子每天念書念到深夜，<br>
+          <span class="highlight">成績卻還是原地踏步？</span>
+        </h1>
+
+        <p class="hero-subtitle hero-fade">往往不是孩子不努力，而是學習雜訊太多。</p>
+        <p class="hero-subtitle-bold hero-fade"><span>ThinkU 幫孩子找出真正該念的 20%，讓努力不再白費。</span></p>
+
+        <a href="#formSection" class="hero-cta hero-fade">
+          <i class="fa-solid fa-bell"></i>
+          立即填寫問卷，不錯過精彩資訊
+          <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- Right: App Preview -->
+      <div class="hero-images">
+        <div class="app-card slide-in-right" style="animation-delay: 0.4s;">
+          <img src="image/image 57.jpg" alt="ThinkU 學生端畫面">
+          <div class="app-label">
+            <i class="fa-solid fa-graduation-cap"></i>
+            學生端
+          </div>
+        </div>
+        <div class="app-card slide-in-right" style="animation-delay: 0.6s;">
+          <img src="image/image 49.jpg" alt="ThinkU 家長端畫面">
+          <div class="app-label">
+            <i class="fa-solid fa-user-shield"></i>
+            家長端
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Footer Benefits Bar ===== -->
+  <div class="footer-bar">
+    <div class="footer-item">
+      <i class="fa-solid fa-bell"></i>
+      <span class="label">第一時間通知</span>
+      <span class="desc">不錯過募資限量名額</span>
+    </div>
+    <div class="footer-item">
+      <i class="fa-solid fa-star"></i>
+      <span class="label">優先體驗資格</span>
+      <span class="desc">搶在正式開放前試用</span>
+    </div>
+  </div>
+
+  <!-- ===== Form Section ===== -->
+  <section class="form-section" id="formSection">
+    <div class="form-container">
+      <div class="form-header">
+        <h2>搶先預約，掌握最新消息</h2>
+        <p>留下資料，我們將第一時間通知您募資開放與體驗資訊。</p>
+      </div>
+
+      <div class="card">
+        <div class="intro-box">
+          <strong><i class="fa-solid fa-rocket"></i> 搶先預約，掌握 ThinkU 最新消息</strong>
+          <p>ThinkU 專為高中生與家長打造，用更聚焦的「減法學習」，協助孩子精準掌握必考重點。留下資料，我們將第一時間通知您募資開放與體驗資訊。</p>
+        </div>
+
+        <form id="waitlistForm">
+
+          <div class="section-title">
+            <span class="section-index">1</span>
+            基本聯絡資料
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="parentName">您的姓名 (Name)</label>
+            <input id="parentName" name="parent_name" type="text" placeholder="請輸入姓名" required>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="email">Email <span style="color:#FF7675;">*</span></label>
+            <input id="email" name="email" type="email" placeholder="將用於發送募資與體驗通知" required>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="phone">手機號碼（選填）</label>
+            <input id="phone" name="phone" type="tel" placeholder="09xxxxxxxx">
+            <div class="field-note">方便接收早鳥開賣簡訊，不錯過限量名額。</div>
+          </div>
+
+          <div class="section-title">
+            <span class="section-index">2</span>
+            孩子目前學習狀況
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="grade">孩子目前就讀階段</label>
+            <select id="grade" name="grade" required>
+              <option value="">請選擇</option>
+              <option value="junior">國中</option>
+              <option value="prep_high">準備升高中</option>
+              <option value="high_1">高一</option>
+              <option value="high_2">高二</option>
+              <option value="high_3">高三</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">目前主要的學習方式是？</label>
+            <div class="choice-grid">
+              <div class="choice-item">
+                <input type="radio" name="cram" id="cram_none" value="none">
+                <label for="cram_none"><span class="choice-title">目前沒有補習</span></label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="cram" id="cram_class" value="class">
+                <label for="cram_class"><span class="choice-title">大型補習班</span></label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="cram" id="cram_tutor" value="tutor">
+                <label for="cram_tutor"><span class="choice-title">個人家教</span></label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="cram" id="cram_online" value="online">
+                <label for="cram_online"><span class="choice-title">線上課程</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="budget">目前每月平均教育投入約為？</label>
+            <select id="budget" name="budget">
+              <option value="">請選擇</option>
+              <option value="under_3000">NT$3,000 以下</option>
+              <option value="3000_8000">NT$3,000－8,000</option>
+              <option value="8000_15000">NT$8,000－15,000</option>
+              <option value="over_15000">NT$15,000 以上</option>
+            </select>
+          </div>
+
+          <div class="section-title">
+            <span class="section-index">3</span>
+            使用需求與期待
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">您最希望孩子優先加強哪些科目？（可複選）</label>
+            <div class="choice-grid">
+              <div class="choice-item"><input type="checkbox" id="subject_math" name="subject" value="math"><label for="subject_math"><span class="choice-title">數學</span></label></div>
+              <div class="choice-item"><input type="checkbox" id="subject_english" name="subject" value="english"><label for="subject_english"><span class="choice-title">英文</span></label></div>
+              <div class="choice-item"><input type="checkbox" id="subject_physics" name="subject" value="physics"><label for="subject_physics"><span class="choice-title">物理</span></label></div>
+              <div class="choice-item"><input type="checkbox" id="subject_chemistry" name="subject" value="chemistry"><label for="subject_chemistry"><span class="choice-title">化學</span></label></div>
+              <div class="choice-item"><input type="checkbox" id="subject_biology" name="subject" value="biology"><label for="subject_biology"><span class="choice-title">生物</span></label></div>
+              <div class="choice-item"><input type="checkbox" id="subject_chinese" name="subject" value="chinese"><label for="subject_chinese"><span class="choice-title">國文</span></label></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">未來 ThinkU 若結合 LTrust 學習平台推出「家長專屬功能」，哪一項最能吸引您付費升級？</label>
+            <div class="field-note" style="margin-bottom: 12px;">此為單選題，請選擇您最看重的一項。</div>
+            <div class="choice-grid single-col">
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_blindspot" value="blindspot">
+                <label for="ltrust_blindspot">
+                  <span class="choice-title">學習盲點統整報告</span>
+                  <span class="choice-desc">根據孩子向 AI 提問的紀錄，統整出他們最常卡關的觀念。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_subtraction" value="subtraction">
+                <label for="ltrust_subtraction">
+                  <span class="choice-title">減法學習成效追蹤</span>
+                  <span class="choice-desc">記錄孩子跳過了多少不必要的雜訊，節省了多少無效刷題的時間。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_rhythm" value="rhythm">
+                <label for="ltrust_rhythm">
+                  <span class="choice-title">學習與思考節奏診斷</span>
+                  <span class="choice-desc">分析孩子在面對難題時，是習慣直接要答案，還是願意跟著 AI 引導思考。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_guide" value="guide">
+                <label for="ltrust_guide">
+                  <span class="choice-title">AI 專屬陪讀指引</span>
+                  <span class="choice-desc">提供家長一份如何配合 AI 輔助孩子學習的具體建議與溝通心法。</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">若 ThinkU 正式推出，您可接受的年費區間為何？</label>
+            <div class="choice-grid">
+              <div class="choice-item"><input type="radio" name="price" id="price_1" value="under_1000"><label for="price_1"><span class="choice-title">NT$1,000 以下</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_2" value="1000_2000"><label for="price_2"><span class="choice-title">NT$1,000－2,000</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_3" value="2000_3000"><label for="price_3"><span class="choice-title">NT$2,000－3,000</span></label></div>
+              <div class="choice-item"><input type="radio" name="price" id="price_4" value="over_3000"><label for="price_4"><span class="choice-title">NT$3,000 以上</span></label></div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <button class="btn-submit" type="submit">確認送出，完成預約</button>
+            <div class="privacy-note">
+              <i class="fa-solid fa-lock"></i> 您的資料將受嚴格保密，僅用於 ThinkU 募資與體驗相關通知。
+            </div>
+            <div id="statusMessage" class="status-message"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile FAB -->
+  <a href="#formSection" class="fab-cta">
+    <i class="fa-solid fa-pen-to-square"></i> 立即填寫
+  </a>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="回到頂部">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // ===== 插圖：進場結束 → 漂浮 =====
+    (function() {
+      const chars = document.querySelectorAll('.deco-char');
+      chars.forEach(function(el) {
+        el.addEventListener('animationend', function() {
+          el.classList.add('floating');
+        });
+      });
+    })();
+
+    // Scroll to Top
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // GTM DataLayer
+    window.dataLayer = window.dataLayer || [];
+    function pushEvent(eventName, params = {}) {
+      window.dataLayer.push({ event: eventName, ...params });
+    }
+
+    function getCheckedValues(name) {
+      return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
+    }
+
+    function getCheckedValue(name) {
+      const el = document.querySelector(`input[name="${name}"]:checked`);
+      return el ? el.value : "";
+    }
+
+    const form = document.getElementById('waitlistForm');
+    const statusMessage = document.getElementById('statusMessage');
+
+    function showMessage(type, text) {
+      statusMessage.className = 'status-message ' + type;
+      statusMessage.textContent = text;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const formData = {
+        parent_name: document.getElementById('parentName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        grade: document.getElementById('grade').value,
+        cram: getCheckedValue('cram'),
+        budget: document.getElementById('budget').value,
+        subjects: getCheckedValues('subject'),
+        ltrust_feature: getCheckedValue('ltrust_feature'),
+        price: getCheckedValue('price')
+      };
+
+      if (!formData.parent_name || !formData.email || !formData.grade) {
+        showMessage('error', '請確認必填欄位（姓名、Email、就讀階段）皆已填寫。');
+        return;
+      }
+
+      pushEvent('waitlist_submit_click', {
+        grade: formData.grade,
+        ltrust_preference: formData.ltrust_feature
+      });
+
+      const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSe219MSo2rVjMu8M0darQ5EiEjVScOsra2GzdM0Smroyg2bEw/formResponse";
+
+      const valueMap = {
+        grade: { junior: "國中", prep_high: "準備升高中", high_1: "高一", high_2: "高二", high_3: "高三" },
+        cram: { none: "目前沒有補習", class: "補習班", tutor: "家教", online: "線上課程" },
+        budget: { under_3000: "NT$3,000 以下", "3000_8000": "NT$3,000－8,000", "8000_15000": "NT$8,000－15,000", over_15000: "NT$15,000 以上" },
+        subject: { math: "數學", english: "英文", physics: "物理", chemistry: "化學", biology: "生物", chinese: "國文" },
+        price: { under_1000: "NT$1,000 以下", "1000_2000": "NT$1,000－2,000", "2000_3000": "NT$2,000－3,000", over_3000: "NT$3,000 以上" },
+        ltrust_feature: {
+          blindspot: "學習盲點統整報告",
+          subtraction: "減法學習成效追蹤",
+          rhythm: "學習與思考節奏診斷",
+          guide: "AI 專屬陪讀指引"
+        }
+      };
+
+      const formDataGoogle = new FormData();
+      formDataGoogle.append("entry.1969919343", formData.parent_name);
+      formDataGoogle.append("entry.2007659246", formData.email);
+      formDataGoogle.append("entry.1555309747", formData.phone);
+      formDataGoogle.append("entry.233635302", valueMap.grade[formData.grade] || "");
+      formDataGoogle.append("entry.608173105", valueMap.cram[formData.cram] || "");
+      formDataGoogle.append("entry.1970214267", valueMap.budget[formData.budget] || "");
+
+      formData.subjects.forEach(subject => {
+        const mapped = valueMap.subject[subject];
+        if (mapped) {
+          formDataGoogle.append("entry.1887397985", mapped);
+        }
+      });
+
+      formDataGoogle.append("entry.2054707673", valueMap.ltrust_feature[formData.ltrust_feature] || "");
+      formDataGoogle.append("entry.1642947021", valueMap.price[formData.price] || "");
+
+      fetch(formURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formDataGoogle
+      }).then(() => {
+        showMessage('success', '預約成功！感謝您的填寫。我們將優先通知您後續消息。');
+        form.reset();
+      }).catch(err => {
+        showMessage('error', '傳送失敗，請確認您的網路連線後再試一次。');
+      });
+    });
+  </script>
+</body>
+</html>
