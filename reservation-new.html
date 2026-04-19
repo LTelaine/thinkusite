@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThinkU｜募資預約通知</title>
+  <title>ThinkU｜搶先預約・首批體驗通知</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
@@ -295,7 +295,7 @@
 
     /* ===== Form Section ===== */
     .form-section {
-      background: #f4f7fb;
+      background: #fff9f5;
       padding: 60px 20px 80px;
     }
 
@@ -319,6 +319,15 @@
     .form-header p {
       font-size: 1.1rem;
       color: var(--text-muted);
+    }
+
+    .form-header .highlight-text {
+      display: inline-block;
+      background: #fee8da;
+      padding: 8px 18px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+      color: #d4520a;
     }
 
     .card {
@@ -833,7 +842,7 @@
       <img src="image/ThinkU_Logo_AlphaWhite.png" alt="ThinkU">
     </div>
     <a href="#formSection" class="header-cta">
-      立即填寫抽星巴克
+      立即預約先行者資格
     </a>
   </header>
 
@@ -860,7 +869,7 @@
 
         <a href="#formSection" class="hero-cta hero-fade">
           <i class="fa-solid fa-bell"></i>
-          立即填寫問卷，不錯過精彩資訊
+          立即加入【先行者計畫】，領取 5 月實測權
           <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
@@ -889,13 +898,13 @@
   <div class="footer-bar">
     <div class="footer-item">
       <i class="fa-solid fa-bell"></i>
-      <span class="label">第一時間通知</span>
-      <span class="desc">不錯過募資限量名額</span>
+      <span class="label">鎖定先行者席位</span>
+      <span class="desc">第一時間獲取開發進度與鎖定價通知</span>
     </div>
     <div class="footer-item">
       <i class="fa-solid fa-star"></i>
       <span class="label">優先體驗資格</span>
-      <span class="desc">搶在正式開放前試用</span>
+      <span class="desc">受邀參與 5 月份實機訪談體驗</span>
     </div>
   </div>
 
@@ -903,14 +912,19 @@
   <section class="form-section" id="formSection">
     <div class="form-container">
       <div class="form-header">
-        <h2>搶先預約，掌握最新消息</h2>
-        <p>留下資料，我們將第一時間通知您募資開放與體驗資訊。</p>
+        <h2>預約 ThinkU，搶先成為孩子的「減法學習」領航員</h2>
+        <p class="highlight-text"><b>加入【ThinkU 先行者計畫】，鎖定 5 月份 Prototype 優先體驗資格。</b></p>
+        
+        <p>我們不只是發送通知，更誠摯邀請您參與 5 月份的產品共創實測。<br>
+          請於下方留下 Email 與 LINE ID，確保我們能將「實機訪談邀請」與「早鳥永久鎖定價」優惠券精準送達您的手中，與您攜手排除孩子的學習雜訊。</p>
       </div>
 
       <div class="card">
         <div class="intro-box">
-          <strong><i class="fa-solid fa-rocket"></i> 搶先預約，掌握 ThinkU 最新消息</strong>
-          <p>ThinkU 專為高中生與家長打造，用更聚焦的「減法學習」，協助孩子精準掌握必考重點。留下資料，我們將第一時間通知您募資開放與體驗資訊。</p>
+          <strong><i class="fa-solid fa-rocket"></i> 搶先預約 ThinkU，您可以獲得：</strong>
+          <p>📊 看見學習黑盒子：家長專屬成效儀表板，即時掌握孩子進度。</p>
+          <p>🦉 深夜隨身助教：孩子讀書卡住時，AI 引導想通而非直接給答案。</p>
+          <p>🧪 5 月 Prototype 優先實測權：在正式開發前，讓孩子參與產品共創。</p>
         </div>
 
         <form id="waitlistForm">
@@ -992,6 +1006,63 @@
             </div>
           </div>
 
+          <div class="form-group">
+            <label class="field-label">未來 ThinkU 若結合 LTrust 學習平台推出「家長專屬功能」，哪一項最能吸引您付費升級？</label>
+            <div class="field-note" style="margin-bottom: 12px;">此為單選題，請選擇您最看重的一項。</div>
+            <div class="choice-grid single-col">
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_blindspot" value="blindspot">
+                <label for="ltrust_blindspot">
+                  <span class="choice-title">學習盲點統整報告</span>
+                  <span class="choice-desc">根據孩子向 AI 提問的紀錄，統整出他們最常卡關的觀念。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_subtraction" value="subtraction">
+                <label for="ltrust_subtraction">
+                  <span class="choice-title">減法學習成效追蹤</span>
+                  <span class="choice-desc">記錄孩子跳過了多少不必要的雜訊，節省了多少無效刷題的時間。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_rhythm" value="rhythm">
+                <label for="ltrust_rhythm">
+                  <span class="choice-title">學習與思考節奏診斷</span>
+                  <span class="choice-desc">分析孩子在面對難題時，是習慣直接要答案，還是願意跟著 AI 引導思考。</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="ltrust_feature" id="ltrust_guide" value="guide">
+                <label for="ltrust_guide">
+                  <span class="choice-title">AI 專屬陪讀指引</span>
+                  <span class="choice-desc">提供家長一份如何配合 AI 輔助孩子學習的具體建議與溝通心法。</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">若 ThinkU 於 5 月份開放 Prototype（原型）實機體驗訪談，您是否願意參與並領取「早鳥鎖定價」優惠？</label>
+            <div class="choice-grid single-col">
+              <div class="choice-item">
+                <input type="radio" name="prototype_interview" id="proto_yes" value="yes">
+                <label for="proto_yes">
+                  <span class="choice-title">我願意，並留下 LINE ID 方便聯繫</span>
+                </label>
+              </div>
+              <div class="choice-item">
+                <input type="radio" name="prototype_interview" id="proto_no" value="no">
+                <label for="proto_no">
+                  <span class="choice-title">暫不參加，僅接收 Email 通知</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group" id="lineIdGroup" style="display:none;">
+            <label class="field-label" for="lineId">您的 LINE ID</label>
+            <input id="lineId" name="line_id" type="text" placeholder="請輸入 LINE ID">
+          </div>
 
           <div class="cta-box">
             <button class="btn-submit" type="submit">確認送出，完成預約</button>
@@ -1033,6 +1104,13 @@
     scrollTopBtn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    // 選「我願意」時顯示 LINE ID 欄位
+    document.querySelectorAll('input[name="prototype_interview"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        document.getElementById('lineIdGroup').style.display = this.value === 'yes' ? '' : 'none';
+      });
+    });
+
     // GTM DataLayer
     window.dataLayer = window.dataLayer || [];
     function pushEvent(eventName, params = {}) {
@@ -1065,7 +1143,8 @@
         phone: document.getElementById('phone').value.trim(),
         grade: document.getElementById('grade').value,
         cram: getCheckedValue('cram'),
-        subjects: getCheckedValues('subject')
+        subjects: getCheckedValues('subject'),
+        ltrust_feature: getCheckedValue('ltrust_feature')
       };
 
       if (!formData.parent_name || !formData.email || !formData.grade) {
@@ -1082,7 +1161,13 @@
       const valueMap = {
         grade: { junior: "國中", prep_high: "準備升高中", high_1: "高一", high_2: "高二", high_3: "高三" },
         cram: { none: "目前沒有補習", class: "補習班", tutor: "家教", online: "線上課程" },
-        subject: { math: "數學", english: "英文", physics: "物理", chemistry: "化學", biology: "生物", chinese: "國文" }
+        subject: { math: "數學", english: "英文", physics: "物理", chemistry: "化學", biology: "生物", chinese: "國文" },
+        ltrust_feature: {
+          blindspot: "學習盲點統整報告",
+          subtraction: "減法學習成效追蹤",
+          rhythm: "學習與思考節奏診斷",
+          guide: "AI 專屬陪讀指引"
+        }
       };
 
       const formDataGoogle = new FormData();
@@ -1097,6 +1182,8 @@
           formDataGoogle.append("entry.1887397985", mapped);
         }
       });
+
+      formDataGoogle.append("entry.2054707673", valueMap.ltrust_feature[formData.ltrust_feature] || "");
 
       fetch(formURL, {
         method: "POST",
