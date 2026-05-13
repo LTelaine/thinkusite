@@ -1,0 +1,2194 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 1920,
+      "height": 10736,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "t9AEe",
+          "x": 1,
+          "y": 70,
+          "name": "image 3",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/bg-hero.jpg",
+            "mode": "fill"
+          },
+          "width": 1918,
+          "height": 814,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "JhzzD",
+          "x": 0,
+          "y": 0,
+          "name": "Rectangle 2",
+          "fill": "#ffffffff",
+          "width": 1920,
+          "height": 70,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0000000d",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 3.5
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "tvdgT",
+          "x": 293,
+          "y": 14,
+          "name": "ThinkU_Logo 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/ThinkU_Logo.png",
+            "mode": "fill"
+          },
+          "width": 140,
+          "height": 46,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "iIt5l",
+          "x": 1494,
+          "y": 10,
+          "name": "Group 1",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 24,
+              "id": "ZiZ32",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 4",
+              "fill": "#e95603ff",
+              "width": 146,
+              "height": 48,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "L4OcO",
+              "x": 35,
+              "y": 5,
+              "name": "立即贊助",
+              "fill": "#ffffffff",
+              "content": "立即贊助",
+              "fontFamily": "Noto Sans Arabic",
+              "fontSize": 20,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "PgrZT",
+          "x": 0,
+          "y": 70,
+          "name": "Rectangle 9",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -269.93300313755884,
+            "size": {
+              "height": 1.009324301218931
+            },
+            "colors": [
+              {
+                "color": "#ffffff00",
+                "position": 0
+              },
+              {
+                "color": "#ffffffff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.5046614111219039,
+              "y": 0.46113830511237514
+            }
+          },
+          "width": 1188,
+          "height": 817,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "Z3fF16",
+          "x": 303,
+          "y": 223,
+          "name": "有一種無力感， 叫做「我明明都懂了」",
+          "fill": "#000000ff",
+          "content": "有一種無力感，\n叫做「我明明都懂了」",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 45,
+          "fontWeight": "900"
+        },
+        {
+          "type": "text",
+          "id": "a9qAmN",
+          "x": 303,
+          "y": 386,
+          "name": "孩子努力學習，卻總是無法穩定發揮， 你也擔心，會不會只是沒跟上？ ThinKU 用科學方法 X 專業教學 陪伴孩子突破卡關， 找回學習動力，穩定成績，自信向前。",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 573,
+          "height": 177,
+          "content": "孩子努力學習，卻總是無法穩定發揮，\n你也擔心，會不會只是沒跟上？ \nThinKU 用科學方法 X 專業教學 陪伴孩子突破卡關，\n找回學習動力，穩定成績，自信向前。",
+          "lineHeight": 1.6666666666666667,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "yDNOb",
+          "x": 318,
+          "y": 657,
+          "name": "已有 7 位家長支持，目標 50 位",
+          "fill": "#383838ff",
+          "content": "已有 7 位家長支持，目標 50 位",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "eXb3a",
+          "x": 1197,
+          "y": 15,
+          "name": "已有 7 位家長支持，目標 50 位",
+          "fill": "#383838ff",
+          "content": "已有 7 位家長支持，目標 50 位",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "C1vCCg",
+          "x": 317,
+          "y": 617,
+          "name": "這是概念驗證市調，支持不會實際扣款",
+          "fill": "#e95603ff",
+          "content": "這是概念驗證市調，支持不會實際扣款",
+          "lineHeight": 2.5,
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "path",
+          "id": "NxZ44",
+          "x": 300,
+          "y": 491,
+          "name": "Vector 1",
+          "opacity": 0.30000001192092896,
+          "geometry": "M0 393l1618.5-393 0 393-1618.5 0z",
+          "fill": "#e95603ff",
+          "width": 1618.5,
+          "height": 393,
+          "stroke": {
+            "align": "center",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "RNEzJ",
+          "x": 1256,
+          "y": 761,
+          "name": "Group 3",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "cK8WF",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#ffffffe5",
+              "width": 589,
+              "height": 74,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "uHeGR",
+              "x": 45,
+              "y": 18,
+              "name": "科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長",
+              "fill": "#000000ff",
+              "textGrowth": "fixed-width-height",
+              "width": 500,
+              "height": 39,
+              "content": "科學診斷 ｜  精準教學 ｜ 成效追蹤 ｜ 陪伴成長",
+              "lineHeight": 1.6666666666666667,
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "RHNic",
+          "x": 300,
+          "y": 549,
+          "name": "Group 2",
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#00000040",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 3.5
+          },
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 16,
+              "id": "kxMWm",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 7",
+              "fill": "#e95603ff",
+              "width": 304,
+              "height": 67.89081885856079,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "Uylu9",
+              "x": 65,
+              "y": 19,
+              "name": "支持這個計畫",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 186,
+              "height": 23,
+              "content": "支持這個計畫",
+              "lineHeight": 1.3333333333333333,
+              "fontFamily": "Noto Sans",
+              "fontSize": 22,
+              "fontWeight": "500"
+            },
+            {
+              "type": "path",
+              "id": "LWbUO",
+              "x": 232.3374689826303,
+              "y": 26.401985111662498,
+              "name": "Vector",
+              "geometry": "M0 6l14 0m-6 6l6-6m-6-6l6 6",
+              "width": 18.858560794044664,
+              "height": 15.841191066997519,
+              "stroke": {
+                "align": "center",
+                "thickness": 2,
+                "join": "round",
+                "cap": "round",
+                "fill": "#ffffffff"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "W4FhF",
+          "x": 882,
+          "y": 948,
+          "name": "產品概念",
+          "fill": "#000000ff",
+          "content": "產品概念",
+          "textAlign": "center",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 40,
+          "fontWeight": "700"
+        },
+        {
+          "type": "group",
+          "id": "A9GV3y",
+          "x": 464,
+          "y": 1122,
+          "name": "Group 6",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 43,
+              "id": "BQXS2",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 12",
+              "fill": "#000000ff",
+              "width": 990,
+              "height": 556.3953336827894,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "UqwJD",
+          "x": 710,
+          "y": 1008,
+          "name": "孩子卡住的那個點，我們找到了",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 500,
+          "height": 39,
+          "content": "孩子卡住的那個點，我們找到了",
+          "lineHeight": 1.6666666666666667,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "W29bg",
+          "x": 669,
+          "y": 1788,
+          "name": "我們做 ThinkU 的原因，是因為我們發現孩子的問題從來不是努力不夠，是方向沒人告訴他。",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 564,
+          "height": 79,
+          "content": "我們做 ThinkU 的原因，是因為我們發現孩子的問題從來不是努力不夠，是方向沒人告訴他。",
+          "lineHeight": 1.6666666666666667,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 24,
+          "fontWeight": "500"
+        },
+        {
+          "type": "path",
+          "id": "bevc8",
+          "x": 951,
+          "y": 1633,
+          "name": "Vector 2",
+          "rotation": 0.0000025044782690431637,
+          "geometry": "M0 0l0 248",
+          "width": 0,
+          "height": 109,
+          "stroke": {
+            "align": "center",
+            "thickness": 1,
+            "fill": "#9d9d9dff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "B29qN",
+          "x": 0,
+          "y": 1999,
+          "name": "Rectangle 17",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -180.00002280517919,
+            "size": {
+              "height": 0.9999999999999206
+            },
+            "colors": [
+              {
+                "color": "#ffffffff",
+                "position": 0
+              },
+              {
+                "color": "#ffcc00ff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.5404411514288678,
+              "y": 0.5000000000000013
+            }
+          },
+          "width": 1920,
+          "height": 345,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "u2aa8",
+          "x": 701,
+          "y": 2083,
+          "name": "不取代老師或補習班， 它是你判斷孩子學習狀態的工具。",
+          "fill": "#000000ff",
+          "content": "不取代老師或補習班， 它是你判斷孩子學習狀態的工具。",
+          "textAlign": "center",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 30,
+          "fontWeight": "700"
+        },
+        {
+          "type": "group",
+          "id": "Rbsjx",
+          "x": 283,
+          "y": 2222.9999999999995,
+          "name": "Group 7",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "SVnG5",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#ffffffe5",
+              "width": 1360,
+              "height": 74,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "JyGsK",
+              "x": 101.32025909423828,
+              "y": 18.000000000000455,
+              "name": "就像健康手環幫你看見身體數據，ThinkU 幫你看見孩子的學習盲點。",
+              "fill": "#000000ff",
+              "textGrowth": "fixed-width-height",
+              "width": 1141.034912109375,
+              "height": 39,
+              "content": "就像健康手環幫你看見身體數據，ThinkU 幫你看見孩子的學習盲點。",
+              "lineHeight": 1.6666666666666667,
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "n7uoql",
+          "x": 821,
+          "y": 1913,
+          "name": "ThinkU_Logo 2",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/ThinkU_Logo.png",
+            "mode": "fill"
+          },
+          "width": 260,
+          "height": 86,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "JBurf",
+          "x": 921.8750000000002,
+          "y": 1362.9485369939357,
+          "name": "Group 5",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "c1E5J9",
+              "x": 0,
+              "y": 0,
+              "name": "Ellipse 1",
+              "sweepAngle": -360.00001001791264,
+              "fill": "#e95603ff",
+              "width": 74.25,
+              "height": 74.24999999999999,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "path",
+              "id": "Eohez",
+              "x": 31.30147058823536,
+              "y": 26.93382352941171,
+              "name": "Vector",
+              "geometry": "M0 0l0 16 13-8-13-8z",
+              "fill": "#ffffffff",
+              "width": 16.74264705882353,
+              "height": 20.382352941176467,
+              "stroke": {
+                "align": "center",
+                "thickness": 2,
+                "join": "round",
+                "cap": "round"
+              }
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "AudS6",
+          "x": -9,
+          "y": 2344,
+          "name": "Rectangle 39",
+          "fill": "#fffcf7ff",
+          "width": 1920,
+          "height": 764,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "UrKOC",
+          "x": 274,
+          "y": 2565,
+          "name": "不是功能列表，是你每天面對的問題",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 564,
+          "height": 47,
+          "content": "不是功能列表，是你每天面對的問題",
+          "lineHeight": 1.6666666666666667,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "a0dWSO",
+          "x": 276,
+          "y": 2438,
+          "name": "家長在意的事 ThinkU 怎麼解",
+          "fill": "#000000ff",
+          "content": "家長在意的事 ThinkU 怎麼解",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 40,
+          "fontWeight": "700"
+        },
+        {
+          "type": "group",
+          "id": "RbXFK",
+          "x": 276,
+          "y": 2632,
+          "name": "Group 20",
+          "children": [
+            {
+              "type": "text",
+              "id": "d3Cq0U",
+              "x": 18,
+              "y": 0,
+              "name": "ThinkU 四大產品理念",
+              "fill": "#000000ff",
+              "textGrowth": "fixed-width-height",
+              "width": 564,
+              "height": 47,
+              "content": "ThinkU 四大產品理念",
+              "lineHeight": 1.6666666666666667,
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            },
+            {
+              "type": "rectangle",
+              "id": "DUTTi",
+              "x": 0,
+              "y": 7,
+              "name": "Rectangle 21",
+              "fill": "#e95603ff",
+              "width": 4,
+              "height": 27,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "WSAbb",
+          "x": 982,
+          "y": 2438,
+          "name": "Rectangle 26",
+          "fill": "#f7f7f7ff",
+          "width": 516,
+          "height": 344,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "IFFbP",
+          "x": 961,
+          "y": 2889.9999160170555,
+          "name": "Group 13",
+          "children": [
+            {
+              "type": "text",
+              "id": "AorPo",
+              "x": 0,
+              "y": 0,
+              "name": "│｜ 精準學習 ｜",
+              "fill": "#e95603ff",
+              "textGrowth": "fixed-width-height",
+              "width": 207.3809356689453,
+              "height": 58.64181900024414,
+              "content": "│｜ 精準學習 ｜",
+              "lineHeight": 1.8181818181818181,
+              "fontFamily": "Noto Sans",
+              "fontSize": 22,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "QqmhC",
+              "x": 168.8009490966797,
+              "y": 0,
+              "name": "20% 關鍵學習，把努力花在對的地方",
+              "fill": "#070707ff",
+              "textGrowth": "fixed-width-height",
+              "width": 497.1990051269531,
+              "height": 58.64181900024414,
+              "content": "20% 關鍵學習，把努力花在對的地方",
+              "lineHeight": 1.8181818181818181,
+              "fontFamily": "Noto Sans",
+              "fontSize": 22,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "snCF5",
+          "x": 987,
+          "y": 2940.911865234375,
+          "name": "孩子不需要念更多，而是要念對。 我們專注於最核心的考點，讓學習效率極大化。",
+          "fill": "#696969ff",
+          "textGrowth": "fixed-width-height",
+          "width": 646,
+          "height": 69,
+          "content": "孩子不需要念更多，而是要念對。 我們專注於最核心的考點，讓學習效率極大化。",
+          "lineHeight": 1.5555555555555556,
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "500"
+        },
+        {
+          "type": "rectangle",
+          "id": "hWFBW",
+          "x": 277,
+          "y": 2696,
+          "name": "Rectangle 22",
+          "fill": "#e95603ff",
+          "width": 321,
+          "height": 111,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "xNnh8",
+          "x": 285,
+          "y": 2706,
+          "name": "Rectangle 29",
+          "width": 305,
+          "height": 91,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "LR4RW",
+          "x": 277,
+          "y": 2830,
+          "name": "Rectangle 27",
+          "fill": "#ffffffff",
+          "width": 321,
+          "height": 111,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "hyjvt",
+          "x": 614,
+          "y": 2696,
+          "name": "Rectangle 23",
+          "fill": "#ffffffff",
+          "width": 321,
+          "height": 111,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "NJlpV",
+          "x": 614,
+          "y": 2830,
+          "name": "Rectangle 28",
+          "fill": "#ffffffff",
+          "width": 321,
+          "height": 111,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "path",
+          "id": "ETPwW",
+          "x": 372,
+          "y": 2740,
+          "name": "Vector",
+          "geometry": "M8.00342 9.00122c0 0.26522 0.10536 0.51957 0.29289 0.70711 0.18754 0.18754 0.44189 0.29289 0.70711 0.29289 0.26522 0 0.51957-0.10536 0.7071-0.29289 0.18754-0.18754 0.29289-0.44189 0.2929-0.70711 0-0.26522-0.10536-0.51957-0.2929-0.70711-0.18754-0.18754-0.44189-0.29289-0.7071-0.29289-0.26522 0-0.51957 0.10536-0.70711 0.29289-0.18754 0.18754-0.29289 0.44189-0.29289 0.70711z m1-5c-0.98891 0-1.95561 0.29324-2.77785 0.84265-0.82225 0.54941-1.46311 1.3303-1.84155 2.24393-0.37844 0.91363-0.47745 1.91896-0.28453 2.88887 0.19293 0.9699 0.66913 1.86082 1.3684 2.56008 0.69926 0.69926 1.59018 1.17547 2.56008 1.3684 0.9699 0.19293 1.97524 0.09391 2.88887-0.28453 0.91363-0.37844 1.69453-1.0193 2.24393-1.84155 0.54941-0.82225 0.84265-1.78894 0.84265-2.77785m-4.00002-8.9451c-1.85393-0.20799-3.72668 0.16528-5.3592 1.06817-1.63252 0.90289-2.94411 2.29078-3.75336 3.97169-0.80925 1.68091-1.07615 3.57175-0.76378 5.41097 0.31237 1.83923 1.18856 3.53593 2.50738 4.85542 1.31882 1.31948 3.01508 2.19653 4.85416 2.50982 1.83907 0.31329 3.73005 0.04734 5.41136-0.76105 1.68131-0.8084 3.06986-2.1193 3.97357-3.75136 0.90371-1.63206 1.27792-3.50462 1.07087-5.35866m-5.94098-4.9999l0 3 3 0 3-3-3 0 0-3-3 3z m0 3l-3 3",
+          "width": 29,
+          "height": 28,
+          "stroke": {
+            "align": "center",
+            "thickness": 2,
+            "join": "round",
+            "cap": "round",
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "text",
+          "id": "L1S2M",
+          "x": 414,
+          "y": 2732,
+          "name": "精準學習",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 132,
+          "height": 47,
+          "content": "精準學習",
+          "lineHeight": 1.8181818181818181,
+          "fontFamily": "Noto Sans",
+          "fontSize": 22,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "p2YExO",
+          "x": 750,
+          "y": 2732,
+          "name": "掌握進度",
+          "fill": "#e95603ff",
+          "textGrowth": "fixed-width-height",
+          "width": 133,
+          "height": 47,
+          "content": "掌握進度",
+          "lineHeight": 1.8181818181818181,
+          "fontFamily": "Noto Sans",
+          "fontSize": 22,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "gyqYJ",
+          "x": 752,
+          "y": 2863,
+          "name": "智慧引導",
+          "fill": "#e95603ff",
+          "textGrowth": "fixed-width-height",
+          "width": 133,
+          "height": 47,
+          "content": "智慧引導",
+          "lineHeight": 1.8181818181818181,
+          "fontFamily": "Noto Sans",
+          "fontSize": 22,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "cHC5a",
+          "x": 416,
+          "y": 2865,
+          "name": "深度診斷",
+          "fill": "#e95603ff",
+          "textGrowth": "fixed-width-height",
+          "width": 132,
+          "height": 47,
+          "content": "深度診斷",
+          "lineHeight": 1.8181818181818181,
+          "fontFamily": "Noto Sans",
+          "fontSize": 22,
+          "fontWeight": "500"
+        },
+        {
+          "type": "path",
+          "id": "E5TMO",
+          "x": 707,
+          "y": 2738,
+          "name": "Vector",
+          "geometry": "M7 9.04565c0 0.53043 0.21071 1.03914 0.58579 1.41422 0.37507 0.37507 0.88378 0.58579 1.41421 0.58578 0.53043 0 1.03914-0.21071 1.41421-0.58578 0.37507-0.37507 0.58579-0.88378 0.58579-1.41422 0-0.53043-0.21071-1.03914-0.58579-1.41421-0.37507-0.37507-0.88378-0.58579-1.41421-0.58579-0.53043 0-1.03914 0.21071-1.41421 0.58579-0.37507 0.37507-0.58579 0.88378-0.58579 1.41421z m3.44995-1.45l2.05-2.05m-9.09995 10.49992c-1.46185-1.16192-2.52609-2.74978-3.04522-4.54354-0.51913-1.79376-0.46746-3.70458 0.14787-5.46766 0.61532-1.76308 1.76383-3.2911 3.28634-4.37231 1.52252-1.08121 3.34365-1.66206 5.21101-1.66206 1.86737 0 3.6885 0.58085 5.21101 1.66206 1.52252 1.08121 2.67102 2.60923 3.28634 4.37231 0.61532 1.76308 0.667 3.6739 0.14787 5.46766-0.51914 1.79376-1.58337 3.38162-3.04522 4.54354l-11.2 0z",
+          "width": 32,
+          "height": 28,
+          "stroke": {
+            "align": "center",
+            "thickness": 2,
+            "join": "round",
+            "cap": "round",
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "path",
+          "id": "R14nSP",
+          "x": 373,
+          "y": 2871,
+          "name": "Vector",
+          "geometry": "M3 1l-1 0c-0.53043 0-1.03914 0.21071-1.41421 0.58579-0.37507 0.37507-0.58579 0.88378-0.58579 1.41421l0 3.5c0 1.45869 0.57946 2.85764 1.61091 3.88909 1.03145 1.03145 2.4304 1.61091 3.88909 1.61091 1.45869 0 2.85764-0.57946 3.88909-1.61091 1.03145-1.03145 1.61091-2.4304 1.61091-3.88909l0-3.5c0-0.53043-0.21071-1.03914-0.58579-1.41421-0.37507-0.37507-0.88378-0.58579-1.41421-0.58579l-1 0m-3 11c0 0.78793 0.1552 1.56815 0.45672 2.2961 0.30153 0.72795 0.74348 1.38939 1.30064 1.94654 0.55715 0.55715 1.21859 0.99911 1.94654 1.30064 0.72795 0.30153 1.50817 0.45672 2.2961 0.45672 0.78793 0 1.56815-0.15519 2.2961-0.45672 0.72795-0.30153 1.38939-0.74348 1.94654-1.30064 0.55715-0.55715 0.99911-1.21859 1.30064-1.94654 0.30153-0.72795 0.45672-1.50817 0.45672-2.2961l0-3m-9-9l0 2m-5-2l0 2m12 5c0 0.53043 0.21071 1.03914 0.58579 1.41421 0.37507 0.37507 0.88378 0.58579 1.41421 0.58579 0.53043 0 1.03914-0.21071 1.41421-0.58579 0.37507-0.37507 0.58579-0.88378 0.58579-1.41421 0-0.53043-0.21071-1.03914-0.58579-1.41421-0.37507-0.37507-0.88378-0.58579-1.41421-0.58579-0.53043 0-1.03914 0.21071-1.41421 0.58579-0.37507 0.37507-0.58579 0.88378-0.58579 1.41421z",
+          "width": 30,
+          "height": 28,
+          "stroke": {
+            "align": "center",
+            "thickness": 2,
+            "join": "round",
+            "cap": "round",
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "path",
+          "id": "HkkdY",
+          "x": 710,
+          "y": 2871,
+          "name": "Vector",
+          "geometry": "M5 13l2-6 6-2-2 6-6 2z m-5-4c0 1.1819 0.23279 2.35222 0.68508 3.44415 0.45229 1.09193 1.11523 2.08408 1.95096 2.91981 0.83573 0.83573 1.82788 1.49867 2.91981 1.95096 1.09193 0.45229 2.26225 0.68508 3.44415 0.68508 1.1819 0 2.35222-0.23279 3.44415-0.68508 1.09193-0.45229 2.08408-1.11523 2.91981-1.95096 0.83573-0.83573 1.49867-1.82788 1.95096-2.91981 0.45229-1.09193 0.68508-2.26225 0.68508-3.44415 0-1.1819-0.23279-2.35222-0.68508-3.44415-0.45229-1.09193-1.11523-2.08408-1.95096-2.91981-0.83573-0.83573-1.82788-1.49866-2.91981-1.95096-1.09193-0.45229-2.26225-0.68508-3.44415-0.68508-1.1819 0-2.35222 0.23279-3.44415 0.68508-1.09193 0.45229-2.08408 1.11523-2.91981 1.95096-0.83573 0.83573-1.49866 1.82788-1.95096 2.91981-0.45229 1.09193-0.68508 2.26225-0.68508 3.44415z m9-9l0 2m0 14l0 2m-9-9l2 0m14 0l2 0",
+          "width": 29,
+          "height": 28,
+          "stroke": {
+            "align": "center",
+            "thickness": 2,
+            "join": "round",
+            "cap": "round",
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "WDyhc",
+          "x": 982,
+          "y": 2434.911865234375,
+          "name": "image 9",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/feather-01.jpg",
+            "mode": "fill"
+          },
+          "width": 646,
+          "height": 432,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "ZmZDO",
+          "x": 819,
+          "y": 3203,
+          "name": "iPhone 14 & 15 Pro - 4 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/app-01-2.png",
+            "mode": "fill"
+          },
+          "width": 450,
+          "height": 816,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "ybbn0",
+          "x": 1053.0000000000005,
+          "y": 4031.9999302327633,
+          "name": "Group 14",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "ZEVKg",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#e95603ff",
+              "width": 147,
+              "height": 39.28571319580078,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "ISVXO",
+              "x": 25.999999999999545,
+              "y": 0.00006976723670959473,
+              "name": "無限使用",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 105,
+              "height": 30,
+              "content": "無限使用",
+              "lineHeight": 1.6666666666666667,
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "dtDVn",
+          "x": 1559.0000000000005,
+          "y": 4120.999930232763,
+          "name": "Group 15",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "HeBOo",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#e95603ff",
+              "width": 147,
+              "height": 39.28571319580078,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "vUG0I",
+              "x": 25.999999999999545,
+              "y": 0.00006976723670959473,
+              "name": "每日十次",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 105,
+              "height": 30,
+              "content": "每日十次",
+              "lineHeight": 1.6666666666666667,
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "path",
+          "id": "b9Pht",
+          "x": 0,
+          "y": 3108,
+          "name": "Vector 3",
+          "geometry": "M0 0l771.00006 0-439.74008 1216-331.25998 0 0-1216z",
+          "fill": "#f2671aff",
+          "width": 771.0000610351562,
+          "height": 1216,
+          "stroke": {
+            "align": "center",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "u1mA9K",
+          "x": 830,
+          "y": 4083,
+          "name": "Lite Mode：指引孩子「翻到課本第幾章、看哪張圖表」，建立主動翻書的習慣。",
+          "fill": "#696969ff",
+          "textGrowth": "fixed-width-height",
+          "width": 416,
+          "height": 55,
+          "content": "Lite Mode：指引孩子「翻到課本第幾章、看哪張圖表」，建立主動翻書的習慣。",
+          "lineHeight": 1.5555555555555556,
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "wNFNW",
+          "x": 1335,
+          "y": 4173,
+          "name": "Deep Mode：多 Agent 協作，產出「孩子學習卡點報告」——減法通通，只留真正重要的。",
+          "fill": "#696969ff",
+          "textGrowth": "fixed-width-height",
+          "width": 416,
+          "height": 55,
+          "content": "Deep Mode：多 Agent 協作，產出「孩子學習卡點報告」——減法通通，只留真正重要的。",
+          "lineHeight": 1.5555555555555556,
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "k6CNh",
+          "x": 285,
+          "y": 3196,
+          "name": "我們不追成績 我們找卡點",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 240,
+          "height": 112,
+          "content": "我們不追成績 我們找卡點",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 40,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "QIflC",
+          "x": 830,
+          "y": 4025,
+          "name": "課本智慧索引",
+          "fill": "#000000ff",
+          "content": "課本智慧索引",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 35,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "C7T1N",
+          "x": 1335,
+          "y": 4115,
+          "name": "考點深度解析",
+          "fill": "#000000ff",
+          "content": "考點深度解析",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 35,
+          "fontWeight": "700"
+        },
+        {
+          "type": "group",
+          "id": "kc2xC",
+          "x": 830,
+          "y": 3168,
+          "name": "Group 19",
+          "children": [
+            {
+              "type": "text",
+              "id": "i3e9uL",
+              "x": 0,
+              "y": 0,
+              "name": "功能設計示意，實際介面以正式版為準",
+              "fill": "#696969ff",
+              "textGrowth": "fixed-width-height",
+              "width": 317,
+              "height": 28,
+              "content": "功能設計示意，實際介面以正式版為準",
+              "lineHeight": 1.5555555555555556,
+              "fontFamily": "Noto Sans",
+              "fontSize": 18,
+              "fontWeight": "500"
+            },
+            {
+              "type": "path",
+              "id": "eij1p",
+              "x": 326,
+              "y": 14,
+              "name": "Vector 4",
+              "geometry": "M0 0l595.5 0",
+              "width": 595.5,
+              "height": 0,
+              "stroke": {
+                "align": "center",
+                "thickness": 1,
+                "fill": "#9d9d9dff"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "UNHBU",
+          "x": 396,
+          "y": 3612,
+          "name": "Group 17",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 120,
+              "id": "mp4lH",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 36",
+              "fill": "#ffffffff",
+              "width": 240,
+              "height": 240,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#e95603ff"
+              }
+            },
+            {
+              "type": "text",
+              "id": "fVFKK",
+              "x": 62,
+              "y": 147,
+              "name": "閱讀理解與文法錯誤型態",
+              "fill": "#696969ff",
+              "textGrowth": "fixed-width-height",
+              "width": 119,
+              "height": 48,
+              "content": "閱讀理解與文法錯誤型態\n",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "path",
+              "id": "ady6Q",
+              "x": 92,
+              "y": 60,
+              "name": "Vector",
+              "geometry": "M0 8l0-6c0-0.53043 0.21071-1.03914 0.58579-1.41421 0.37507-0.37507 0.88378-0.58579 1.41421-0.58579 0.53043 0 1.03914 0.21071 1.41421 0.58579 0.37507 0.37507 0.58579 0.88378 0.58579 1.41421l0 6m-4-3l4 0m3-5l0 6c0 0.53043 0.21071 1.03914 0.58579 1.41421 0.37507 0.37507 0.88378 0.58579 1.41421 0.58579 0.53043 0 1.03914-0.21071 1.41421-0.58579 0.37507-0.37507 0.58579-0.88378 0.58579-1.41421l0-1c0-0.53043-0.21071-1.03914-0.58579-1.41421-0.37507-0.37507-0.88378-0.58579-1.41421-0.58579-0.53043 0-1.03914 0.21071-1.41421 0.58579-0.37507 0.37507-0.58579 0.88378-0.58579 1.41421l0 1m10.732-2.00009c-0.22015-0.38126-0.55994-0.67923-0.96668-0.84769-0.40674-0.16847-0.85771-0.19802-1.28296-0.08407-0.42525 0.11395-0.80102 0.36502-1.06904 0.7143-0.26802 0.34927-0.4133 0.77721-0.41332 1.21746l0 1c0.00009 0.4392 0.14475 0.86616 0.41165 1.21497 0.2669 0.3488 0.64119 0.60005 1.0651 0.71496 0.4239 0.11491 0.87385 0.08708 1.28036-0.07918 0.40652-0.16626 0.747-0.46172 0.96889-0.84075",
+              "width": 58,
+              "height": 26,
+              "stroke": {
+                "align": "center",
+                "thickness": 4,
+                "join": "round",
+                "cap": "round",
+                "fill": "#e95603ff"
+              }
+            },
+            {
+              "type": "text",
+              "id": "x3pDHg",
+              "x": 96,
+              "y": 104,
+              "name": "英文",
+              "fill": "#000000ff",
+              "content": "英文",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 25,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "rViGl",
+          "x": 155,
+          "y": 3409,
+          "name": "Group 18",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 120,
+              "id": "CX54t",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 35",
+              "fill": "#ffffffff",
+              "width": 240,
+              "height": 240,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#e95603ff"
+              }
+            },
+            {
+              "type": "text",
+              "id": "mpoEm",
+              "x": 62,
+              "y": 152,
+              "name": "觀念斷點與題型盲點分析",
+              "fill": "#696969ff",
+              "textGrowth": "fixed-width-height",
+              "width": 119,
+              "height": 48,
+              "content": "觀念斷點與題型盲點分析",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "rIE2e",
+              "x": 96,
+              "y": 109,
+              "name": "數學",
+              "fill": "#000000ff",
+              "content": "數學",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 25,
+              "fontWeight": "700"
+            },
+            {
+              "type": "path",
+              "id": "L8lcLa",
+              "x": 97,
+              "y": 56,
+              "name": "Vector",
+              "geometry": "M16 0l-7 0-4 14-3-6-2 0m11 0l6 6m-6 0l6-6",
+              "width": 49,
+              "height": 40,
+              "stroke": {
+                "align": "center",
+                "thickness": 4,
+                "join": "round",
+                "cap": "round",
+                "fill": "#e95603ff"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "n5JTrQ",
+          "x": 302,
+          "y": 3908,
+          "name": "Group 16",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 120,
+              "id": "c03Ef",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 37",
+              "fill": "#ffffffff",
+              "width": 240,
+              "height": 240,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#e95603ff"
+              }
+            },
+            {
+              "type": "text",
+              "id": "rt8Ia",
+              "x": 61,
+              "y": 147,
+              "name": "概念模型與情境轉換診斷",
+              "fill": "#696969ff",
+              "textGrowth": "fixed-width-height",
+              "width": 119,
+              "height": 48,
+              "content": "概念模型與情境轉換診斷\n",
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "qgndw",
+              "x": 95,
+              "y": 104,
+              "name": "物理",
+              "fill": "#000000ff",
+              "content": "物理",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 25,
+              "fontWeight": "700"
+            },
+            {
+              "type": "path",
+              "id": "qzvyo",
+              "x": 101,
+              "y": 55,
+              "name": "Vector",
+              "geometry": "M2.73091 13.99996l11.539 0c0.17553 0 0.34797-0.04621 0.49999-0.13399 0.15202-0.08777 0.27825-0.21401 0.36601-0.36602 0.08777-0.15202 0.13397-0.32446 0.13397-0.5 0-0.17553-0.04621-0.34798-0.13397-0.49999l-5.769-10c-0.08777-0.15201-0.21401-0.27823-0.36602-0.366-0.15201-0.08776-0.32445-0.13396-0.49998-0.13396-0.17553 0-0.34796 0.0462-0.49998 0.13396-0.15201 0.08776-0.27825 0.21399-0.36602 0.366l-5.769 10c-0.08773 0.15194-0.13393 0.3243-0.13398 0.49974-0.00005 0.17545 0.04607 0.34782 0.13372 0.49981 0.08765 0.15199 0.21374 0.27824 0.36562 0.36609 0.15188 0.08784 0.32419 0.13418 0.49964 0.13436z m-2.73091-5.99996l4.45 0m11.55-8l-4.5 6m8.5-2l-7.75 3.25m7.75 2.75l-7-1.5",
+              "width": 43,
+              "height": 30,
+              "stroke": {
+                "align": "center",
+                "thickness": 4,
+                "join": "round",
+                "cap": "round",
+                "fill": "#e95603ff"
+              }
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "XmlOc",
+          "x": 25,
+          "y": 3768,
+          "name": "image 3",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/%E5%B0%91%E6%A4%B0.png",
+            "mode": "fill"
+          },
+          "width": 282,
+          "height": 280,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "rQUz8",
+          "x": 1318,
+          "y": 3299,
+          "name": "iPhone 14 & 15 Pro - 4 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/app-02.png",
+            "mode": "fill"
+          },
+          "width": 450,
+          "height": 816,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "hIwYo",
+          "x": 1,
+          "y": 4324,
+          "name": "Rectangle 38",
+          "fill": "#fffcf7ff",
+          "width": 1920,
+          "height": 1201,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "DSbKH",
+          "x": 623,
+          "y": 4476,
+          "name": "這不是現在購買 概念驗證期間，選擇方案代表您的支持意向，不會實際扣款",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 674,
+          "height": 79,
+          "content": "這不是現在購買 概念驗證期間，選擇方案代表您的支持意向，不會實際扣款",
+          "lineHeight": 1.6666666666666667,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "H3zB2",
+          "x": 629,
+          "y": 4399,
+          "name": "推薦適合你孩子的學習支持方案",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width",
+          "width": 664,
+          "content": "推薦適合你孩子的學習支持方案",
+          "textAlign": "center",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 40,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 31,
+          "id": "DnEy7",
+          "x": 281,
+          "y": 4637,
+          "name": "Rectangle 40",
+          "fill": "#ffffffff",
+          "width": 418,
+          "height": 556,
+          "stroke": {
+            "align": "inside",
+            "thickness": 2,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 31,
+          "id": "q06seT",
+          "x": 752,
+          "y": 4637,
+          "name": "Rectangle 41",
+          "fill": "#ffffffff",
+          "width": 418,
+          "height": 556,
+          "stroke": {
+            "align": "inside",
+            "thickness": 2,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 31,
+          "id": "dD9dJ",
+          "x": 1223,
+          "y": 4637,
+          "name": "Rectangle 42",
+          "fill": "#ffffffff",
+          "width": 418,
+          "height": 556,
+          "stroke": {
+            "align": "inside",
+            "thickness": 2,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "group",
+          "id": "A9PoUP",
+          "x": 887.0000000000005,
+          "y": 4617.999930232763,
+          "name": "Group 22",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "f0P5SH",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#e95603ff",
+              "width": 147,
+              "height": 39.28571319580078,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "Or0cR",
+              "x": 20.999999999999545,
+              "y": 0.00006976723670959473,
+              "name": "最推薦",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 105,
+              "height": 30,
+              "content": "最推薦",
+              "lineHeight": 1.6666666666666667,
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "WE8L3",
+          "x": 350,
+          "y": 4769,
+          "name": "Group 23",
+          "children": [
+            {
+              "type": "text",
+              "id": "b22Q7",
+              "x": 0,
+              "y": 0,
+              "name": "NT$1,490",
+              "fill": "#000000ff",
+              "content": "NT$1,490",
+              "textAlign": "center",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 50,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "LFqIi",
+              "x": 247,
+              "y": 28,
+              "name": "/ 年",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 75,
+              "height": 30,
+              "content": "/ 年",
+              "lineHeight": 1.4285714285714286,
+              "fontFamily": "Noto Sans",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "yrJEy",
+          "x": 821,
+          "y": 4769,
+          "name": "Group 24",
+          "children": [
+            {
+              "type": "text",
+              "id": "uO6VY",
+              "x": 0,
+              "y": 0,
+              "name": "NT$2,490",
+              "fill": "#000000ff",
+              "content": "NT$2,490",
+              "textAlign": "center",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 50,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "DpJoE",
+              "x": 247,
+              "y": 28,
+              "name": "/ 年",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 75,
+              "height": 30,
+              "content": "/ 年",
+              "lineHeight": 1.4285714285714286,
+              "fontFamily": "Noto Sans",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "id": "FsTF4",
+          "x": 1292,
+          "y": 4776,
+          "name": "Group 25",
+          "children": [
+            {
+              "type": "text",
+              "id": "HyCzC",
+              "x": 0,
+              "y": 0,
+              "name": "NT$3,490",
+              "fill": "#000000ff",
+              "content": "NT$3,490",
+              "textAlign": "center",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 50,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "R3aAh6",
+              "x": 247,
+              "y": 28,
+              "name": "/ 年",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 75,
+              "height": 30,
+              "content": "/ 年",
+              "lineHeight": 1.4285714285714286,
+              "fontFamily": "Noto Sans",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "L9ap3",
+          "x": 341,
+          "y": 4719,
+          "name": "支持這個產品，鎖定最低價",
+          "fill": "#af521fff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "支持這個產品，鎖定最低價\n",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "XsZgy",
+          "x": 812,
+          "y": 4719,
+          "name": "完整功能 + 學習進度追蹤",
+          "fill": "#af521fff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "完整功能 + 學習進度追蹤",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "bOlln",
+          "x": 812,
+          "y": 4846,
+          "name": "平均一天不到 NT$7",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "平均一天不到 NT$7",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "qX6gG",
+          "x": 341,
+          "y": 4846,
+          "name": "原價 NT$2,490 ｜ 現省 NT$1,000",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "原價 NT$2,490 ｜ 現省 NT$1,000",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "R93mO",
+          "x": 341,
+          "y": 5134,
+          "name": "限量名額・募資結束恢復原價",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "限量名額・募資結束恢復原價",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "xxsf1",
+          "x": 810,
+          "y": 5134,
+          "name": "穩定建立孩子學習節奏",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "穩定建立孩子學習節奏",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "wBmID",
+          "x": 1279,
+          "y": 5134,
+          "name": "關鍵考季拉開成績差距",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "關鍵考季拉開成績差距",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "V7GlX",
+          "x": 1283,
+          "y": 4719,
+          "name": "適合準備大考的高三生",
+          "fill": "#af521fff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "適合準備大考的高三生",
+          "lineHeight": 2,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "MPit3",
+          "x": 341,
+          "y": 4676,
+          "name": "早鳥支持方案",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "早鳥支持方案",
+          "lineHeight": 1.4285714285714286,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "CcEIO",
+          "x": 812,
+          "y": 4676,
+          "name": "基本陪跑方案",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "基本陪跑方案",
+          "lineHeight": 1.4285714285714286,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "egFDM",
+          "x": 1283,
+          "y": 4676,
+          "name": "進階強化方案",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "進階強化方案",
+          "lineHeight": 1.4285714285714286,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "E68Iq",
+          "x": 308,
+          "y": 4906,
+          "name": "Rectangle 44",
+          "fill": "#ffefe9ff",
+          "width": 364,
+          "height": 212,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "IhyCO",
+          "x": 779,
+          "y": 4906,
+          "name": "Rectangle 45",
+          "fill": "#ffefe9ff",
+          "width": 364,
+          "height": 212,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 10,
+          "id": "bO8yM",
+          "x": 1250,
+          "y": 4906,
+          "name": "Rectangle 46",
+          "fill": "#ffefe9ff",
+          "width": 364,
+          "height": 212,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "JzmF0",
+          "x": 341,
+          "y": 4933,
+          "name": "ThinkU 完整功能 12 個月 Lite 模式無限使用 Deep 模式每日 10 次 學習週報 + 弱點分析",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 176,
+          "content": "ThinkU 完整功能 12 個月\nLite 模式無限使用\nDeep 模式每日 10 次\n學習週報 + 弱點分析",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "Vq1SL",
+          "x": 812,
+          "y": 4933,
+          "name": "包含早鳥方案全部內容 Deep 模式每日 20 次 每月學習重點整報告 家長專屬學習進度彙整",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 176,
+          "content": "包含早鳥方案全部內容\nDeep 模式每日 20 次\n每月學習重點整報告\n家長專屬學習進度彙整",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "OU6LJ",
+          "x": 1283,
+          "y": 4933,
+          "name": "包含基本方案全部內容 AI 弱點診斷報告（每月） 個人化高頻考點學習路徑 考前衝刺期重點整備包",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 176,
+          "content": "包含基本方案全部內容\nAI 弱點診斷報告（每月）\n個人化高頻考點學習路徑\n考前衝刺期重點整備包",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "rectangle",
+          "id": "dI51f",
+          "x": 1649,
+          "y": 4479,
+          "name": "image 17",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/%E7%95%AA%E4%BB%94.png",
+            "mode": "fill"
+          },
+          "width": 213,
+          "height": 175,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 31,
+          "id": "BPMhc",
+          "x": 281,
+          "y": 5240,
+          "name": "Rectangle 43",
+          "fill": "#ffffffff",
+          "width": 1360,
+          "height": 287,
+          "stroke": {
+            "align": "inside",
+            "thickness": 2,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "group",
+          "id": "sSoft",
+          "x": 387,
+          "y": 5367,
+          "name": "Group 26",
+          "children": [
+            {
+              "type": "text",
+              "id": "B63D2a",
+              "x": 0,
+              "y": 0,
+              "name": "NT$9,900",
+              "fill": "#000000ff",
+              "content": "NT$9,900",
+              "textAlign": "center",
+              "fontFamily": "Noto Serif HK",
+              "fontSize": 50,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "MezNz",
+              "x": 247,
+              "y": 28,
+              "name": "/ 年",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 75,
+              "height": 30,
+              "content": "/ 年",
+              "lineHeight": 1.4285714285714286,
+              "fontFamily": "Noto Sans",
+              "fontSize": 28,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "g8xXC",
+          "x": 387,
+          "y": 5439,
+          "name": "平均每人 NT$1,980",
+          "fill": "#404040ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "平均每人 NT$1,980",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "Br4eQ",
+          "x": 387,
+          "y": 5289,
+          "name": "團購支持方案",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "團購支持方案",
+          "lineHeight": 1.4285714285714286,
+          "fontFamily": "Noto Sans",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "group",
+          "id": "IXbWA",
+          "x": 779,
+          "y": 5280,
+          "name": "Group 27",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 10,
+              "id": "G1Sn1s",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 47",
+              "fill": "#ffefe9ff",
+              "width": 823,
+              "height": 212,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "T9vr9g",
+              "x": 38.5234375,
+              "y": 27,
+              "name": " 5 組完整獨立帳號權限  每人皆含基本方案完整功能  獨立學習歷程紀錄  團購專屬使用教學包",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 352.5475158691406,
+              "height": 176,
+              "content": " 5 組完整獨立帳號權限\n 每人皆含基本方案完整功能\n 獨立學習歷程紀錄\n 團購專屬使用教學包",
+              "lineHeight": 2,
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "iVYwT",
+              "x": 412.083740234375,
+              "y": 27,
+              "name": " 團體學習成效總覽儀表板  優先客服支援",
+              "fill": "#404040ff",
+              "textGrowth": "fixed-width-height",
+              "width": 352.5475158691406,
+              "height": 79,
+              "content": " 團體學習成效總覽儀表板\n 優先客服支援",
+              "lineHeight": 2,
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "TA814",
+          "x": 387,
+          "y": 5328,
+          "name": "班級 / 家長群最划算選擇",
+          "fill": "#af521fff",
+          "textGrowth": "fixed-width-height",
+          "width": 302,
+          "height": 39,
+          "content": "班級 / 家長群最划算選擇",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "group",
+          "id": "M4NVeN",
+          "x": 0,
+          "y": 5592,
+          "name": "Group 28",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "mWbDe",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#654100ff",
+              "width": 1920,
+              "height": 158,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "Q1N4xD",
+              "x": 381,
+              "y": 29,
+              "name": "一份孩子學習卡點報告 ＜ 一堂家教課的費用 但 ThinkU 的 AI 教練每天都在，不請假、不遲到。 （個別家教一科約 NT$3,000–6,000/月，補習班約 NT$2,000–4,000/月）",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 1141,
+              "height": 127,
+              "content": "一份孩子學習卡點報告 ＜ 一堂家教課的費用 但 ThinkU 的 AI 教練每天都在，不請假、不遲到。 （個別家教一科約 NT$3,000–6,000/月，補習班約 NT$2,000–4,000/月）",
+              "lineHeight": 1.6666666666666667,
+              "textAlign": "center",
+              "fontFamily": "Noto Sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "nucjP",
+          "x": -21,
+          "y": 5367,
+          "name": "image 16",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/%E9%98%BF%E5%8D%97.png",
+            "mode": "fill"
+          },
+          "width": 340,
+          "height": 319,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        }
+      ]
+    }
+  ]
+}

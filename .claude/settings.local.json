@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir D:\\\\網站相關\\\\OJT\\\\web\\\\git\\\\thinkusite\\\\image *)",
+      "PowerShell(Get-ChildItem \"D:\\\\網站相關\\\\OJT\\\\web\\\\git\\\\thinkusite\\\\image\" | ForEach-Object { [System.BitConverter]::ToString\\([System.Text.Encoding]::UTF8.GetBytes\\($_.Name\\)\\) + \" => \" + $_.Name })"
+    ]
+  }
+}

@@ -1,0 +1,691 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 430,
+      "height": 3088,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "EuZt7",
+          "x": 0,
+          "y": 0,
+          "name": "Rectangle 2",
+          "fill": "#ffffffff",
+          "width": 430,
+          "height": 70,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0000000d",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 3.5
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "a1NsUO",
+          "x": 21,
+          "y": 12,
+          "name": "ThinkU_Logo 2",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/ThinkU_Logo.png",
+            "mode": "fill"
+          },
+          "width": 140,
+          "height": 46,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "gtNNP",
+          "x": 273,
+          "y": 11,
+          "name": "Group 1",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 24,
+              "id": "o8w5yC",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 4",
+              "fill": "#e95603",
+              "width": 146,
+              "height": 48,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "U5plx",
+              "x": 36,
+              "y": 6,
+              "name": "立即贊助",
+              "fill": "#ffffffff",
+              "content": "立即贊助",
+              "fontFamily": "Noto Sans Arabic",
+              "fontSize": 20,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "spoqX",
+          "x": -203,
+          "y": 70,
+          "name": "image 3",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "image/img-hero-01.jpg",
+            "mode": "stretch"
+          },
+          "width": 728,
+          "height": 332,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "G4n9iw",
+          "x": 0,
+          "y": 70,
+          "name": "Rectangle 9",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -269.93300313755884,
+            "size": {
+              "height": 1.009324301218931
+            },
+            "colors": [
+              {
+                "color": "#ffffff00",
+                "position": 0
+              },
+              {
+                "color": "#ffffffff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.5046614111219039,
+              "y": 0.46113830511237514
+            }
+          },
+          "width": 293,
+          "height": 360,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "group",
+          "id": "J3QU7t",
+          "x": 15,
+          "y": 844,
+          "name": "Group 4",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 17,
+              "id": "mxja3",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 8",
+              "fill": "#ffffffe5",
+              "width": 400,
+              "height": 46.1373291015625,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#000000ff"
+              }
+            },
+            {
+              "type": "text",
+              "id": "jf3aA",
+              "x": 31,
+              "y": 4,
+              "name": "科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長",
+              "fill": "#000000ff",
+              "textGrowth": "fixed-width-height",
+              "width": 339,
+              "height": 39,
+              "content": "科學診斷 ｜  精準教學 ｜ 成效追蹤 ｜ 陪伴成長",
+              "lineHeight": 2.5,
+              "fontFamily": "Noto Sans",
+              "fontSize": 16,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 11,
+          "id": "p3apN",
+          "x": 15,
+          "y": 328,
+          "name": "Rectangle 11",
+          "fill": "#ffffffe5",
+          "width": 400,
+          "height": 496,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#e55b09ff"
+          }
+        },
+        {
+          "type": "text",
+          "id": "aRWZz",
+          "x": 77,
+          "y": 766,
+          "name": "已有 7 位家長支持，目標 50 位",
+          "fill": "#383838ff",
+          "content": "已有 7 位家長支持，目標 50 位",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "qznb6",
+          "x": 77,
+          "y": 708,
+          "name": "這是概念驗證市調，支持不會實際扣款",
+          "fill": "#e95603ff",
+          "content": "這是概念驗證市調，支持不會實際扣款",
+          "lineHeight": 2.5,
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "nZeHv",
+          "x": 53,
+          "y": 353,
+          "name": "有一種無力感， 叫做「我明明都懂了」",
+          "fill": "#000000ff",
+          "content": "有一種無力感，\n叫做「我明明都懂了」",
+          "textAlign": "center",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 34,
+          "fontWeight": "900"
+        },
+        {
+          "type": "text",
+          "id": "rbG5z",
+          "x": 33,
+          "y": 473,
+          "name": "孩子努力學習，卻總是無法穩定發揮， 你也擔心，會不會只是沒跟上？ ThinKU 用科學方法 X 專業教學  陪伴孩子突破卡關， 找回學習動力，穩定成績，自信向前。",
+          "fill": "#000000ff",
+          "textGrowth": "fixed-width-height",
+          "width": 371,
+          "height": 140,
+          "content": "孩子努力學習，卻總是無法穩定發揮，\n你也擔心，會不會只是沒跟上？ \nThinKU 用科學方法 X 專業教學  陪伴孩子突破卡關，\n找回學習動力，穩定成績，自信向前。",
+          "lineHeight": 1.5555555555555556,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 18,
+          "fontWeight": "500"
+        },
+        {
+          "type": "group",
+          "id": "G1QvV",
+          "x": 71,
+          "y": 641.000011652708,
+          "name": "Group 2",
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#00000040",
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "blur": 3.5
+          },
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 16,
+              "id": "GlJGW",
+              "x": 0,
+              "y": 0,
+              "name": "Rectangle 7",
+              "fill": "#e95603ff",
+              "width": 289,
+              "height": 64.54093933105469,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "text",
+              "id": "dONno",
+              "x": 66,
+              "y": 13.540942937135696,
+              "name": "支持這個計畫",
+              "fill": "#ffffffff",
+              "textGrowth": "fixed-width-height",
+              "width": 177,
+              "height": 35,
+              "content": "支持這個計畫",
+              "lineHeight": 1.6666666666666667,
+              "fontFamily": "Noto Sans",
+              "fontSize": 24,
+              "fontWeight": "500"
+            },
+            {
+              "type": "path",
+              "id": "LxEvq",
+              "x": 225,
+              "y": 26.540942937135696,
+              "name": "Vector",
+              "geometry": "M0 6l14 0m-6 6l6-6m-6-6l6 6",
+              "width": 17.92803955078125,
+              "height": 15.059553146362305,
+              "stroke": {
+                "align": "center",
+                "thickness": 2,
+                "join": "round",
+                "cap": "round",
+                "fill": "#ffffffff"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "path",
+      "id": "aQvm1",
+      "x": -575,
+      "y": 962,
+      "name": "Vector 4",
+      "geometry": "M0 0l771.00006 0-439.74008 1216-331.25998 0 0-1216z",
+      "fill": "#f2671aff",
+      "width": 771.0000610351562,
+      "height": 1216,
+      "stroke": {
+        "align": "center",
+        "thickness": 1
+      }
+    },
+    {
+      "type": "text",
+      "id": "ZCCtY",
+      "x": 110,
+      "y": 1003,
+      "name": "我們不追成績 我們找卡點",
+      "fill": "#000000ff",
+      "content": "我們不追成績 我們找卡點",
+      "textAlign": "center",
+      "fontFamily": "Noto Serif HK",
+      "fontSize": 34,
+      "fontWeight": "700"
+    },
+    {
+      "type": "group",
+      "id": "F7h8aN",
+      "x": 43,
+      "y": 1406.2739276885986,
+      "name": "Mask group",
+      "effect": {
+        "type": "shadow",
+        "shadowType": "outer",
+        "color": "#0000001a",
+        "blur": 17.5
+      },
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 19,
+          "id": "kXo7S",
+          "x": 0,
+          "y": 28.726072311401367,
+          "name": "Rectangle 33",
+          "width": 351.4719543457031,
+          "height": 645.4917602539062,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "qGKyY",
+          "x": 0,
+          "y": 0,
+          "name": "iPhone 14 & 15 Pro - 4 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 351.4987487792969,
+          "height": 762.0277709960938,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "rwF5O",
+      "x": 214.0000612437725,
+      "y": 2108,
+      "name": "Group 14",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 17,
+          "id": "Zyjwc",
+          "x": 0,
+          "y": 3.000105857849121,
+          "name": "Rectangle 8",
+          "fill": "#e95603ff",
+          "width": 108,
+          "height": 33,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "NIvO8",
+          "x": 10.999938756227493,
+          "y": 0,
+          "name": "無限使用",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 89,
+          "height": 33,
+          "content": "無限使用",
+          "lineHeight": 2.5,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "Tue5B",
+      "x": 209.0000612437725,
+      "y": 2923,
+      "name": "Group 19",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 17,
+          "id": "v0n5C",
+          "x": 0,
+          "y": 3.000105857849121,
+          "name": "Rectangle 8",
+          "fill": "#e95603ff",
+          "width": 108,
+          "height": 33,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "BOhAw",
+          "x": 10.999938756227493,
+          "y": 0,
+          "name": "每日十次",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 89,
+          "height": 33,
+          "content": "每日十次",
+          "lineHeight": 2.5,
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "xYJ1D",
+      "x": 43,
+      "y": 2157,
+      "name": "Lite Mode：指引孩子「翻到課本第幾章、看哪張圖表」，建立主動翻書的習慣。",
+      "fill": "#696969ff",
+      "textGrowth": "fixed-width-height",
+      "width": 351,
+      "height": 61,
+      "content": "Lite Mode：指引孩子「翻到課本第幾章、看哪張圖表」，建立主動翻書的習慣。",
+      "lineHeight": 1.5555555555555556,
+      "fontFamily": "Noto Sans",
+      "fontSize": 18,
+      "fontWeight": "500"
+    },
+    {
+      "type": "text",
+      "id": "umq3R",
+      "x": 38,
+      "y": 2972,
+      "name": "Deep Mode：多 Agent 協作，產出「孩子學習卡點報告」——減法通通，只留真正重要的。",
+      "fill": "#696969ff",
+      "textGrowth": "fixed-width-height",
+      "width": 351,
+      "height": 84,
+      "content": "Deep Mode：多 Agent 協作，產出「孩子學習卡點報告」——減法通通，只留真正重要的。",
+      "lineHeight": 1.5555555555555556,
+      "fontFamily": "Noto Sans",
+      "fontSize": 18,
+      "fontWeight": "500"
+    },
+    {
+      "type": "text",
+      "id": "yoQ9H",
+      "x": 43,
+      "y": 2108,
+      "name": "課本智慧索引",
+      "fill": "#000000ff",
+      "textGrowth": "fixed-width-height",
+      "width": 177,
+      "height": 42,
+      "content": "課本智慧索引",
+      "fontFamily": "Noto Serif HK",
+      "fontSize": 26,
+      "fontWeight": "700"
+    },
+    {
+      "type": "text",
+      "id": "Qp0cN",
+      "x": 38,
+      "y": 2923,
+      "name": "考點深度解析",
+      "fill": "#000000ff",
+      "textGrowth": "fixed-width-height",
+      "width": 177,
+      "height": 42,
+      "content": "考點深度解析",
+      "fontFamily": "Noto Serif HK",
+      "fontSize": 26,
+      "fontWeight": "700"
+    },
+    {
+      "type": "group",
+      "id": "HiNhX",
+      "x": 92,
+      "y": 1129,
+      "name": "Group 18",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 120,
+          "id": "u5gLW",
+          "x": 0,
+          "y": 0,
+          "name": "Rectangle 35",
+          "fill": "#ffffffff",
+          "width": 240,
+          "height": 240,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#e95603ff"
+          }
+        },
+        {
+          "type": "text",
+          "id": "z8WnxP",
+          "x": 62,
+          "y": 152,
+          "name": "觀念斷點與題型盲點分析",
+          "fill": "#696969ff",
+          "textGrowth": "fixed-width-height",
+          "width": 119,
+          "height": 48,
+          "content": "觀念斷點與題型盲點分析",
+          "textAlign": "center",
+          "fontFamily": "Noto Sans",
+          "fontSize": 16,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "OmwKs",
+          "x": 96,
+          "y": 109,
+          "name": "數學",
+          "fill": "#000000ff",
+          "content": "數學",
+          "fontFamily": "Noto Serif HK",
+          "fontSize": 25,
+          "fontWeight": "700"
+        },
+        {
+          "type": "path",
+          "id": "MgOeW",
+          "x": 97,
+          "y": 56,
+          "name": "Vector",
+          "geometry": "M16 0l-7 0-4 14-3-6-2 0m11 0l6 6m-6 0l6-6",
+          "width": 49,
+          "height": 40,
+          "stroke": {
+            "align": "center",
+            "thickness": 4,
+            "join": "round",
+            "cap": "round",
+            "fill": "#e95603ff"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "nOrhn",
+      "x": 54,
+      "y": 1397,
+      "name": "功能設計示意，實際介面以正式版為準",
+      "fill": "#696969ff",
+      "textGrowth": "fixed-width-height",
+      "width": 317,
+      "height": 28,
+      "content": "功能設計示意，實際介面以正式版為準",
+      "lineHeight": 1.5555555555555556,
+      "fontFamily": "Noto Sans",
+      "fontSize": 18,
+      "fontWeight": "500"
+    },
+    {
+      "type": "group",
+      "id": "rTfpw",
+      "x": 38,
+      "y": 2233.653606414795,
+      "name": "Mask group",
+      "effect": {
+        "type": "shadow",
+        "shadowType": "outer",
+        "color": "#0000001a",
+        "offset": {
+          "x": 0,
+          "y": 4
+        },
+        "blur": 17.5
+      },
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 19,
+          "id": "dvAE9",
+          "x": 0,
+          "y": 25.346393585205078,
+          "name": "Rectangle 33",
+          "width": 351.4700012207031,
+          "height": 645.4881591796875,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "ckdd3",
+          "x": 0,
+          "y": 0,
+          "name": "iPhone 14 & 15 Pro - 13 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 351.4700012207031,
+          "height": 762.0816040039062,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        }
+      ]
+    }
+  ]
+}
