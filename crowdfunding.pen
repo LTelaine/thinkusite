@@ -191,11 +191,11 @@
         {
           "type": "text",
           "id": "eXb3a",
-          "x": 1197,
-          "y": 15,
+          "x": 1311,
+          "y": 17,
           "name": "已有 7 位家長支持，目標 50 位",
           "fill": "#383838ff",
-          "content": "已有 7 位家長支持，目標 50 位",
+          "content": "已有 7 位家長支持",
           "lineHeight": 2,
           "fontFamily": "Noto Sans",
           "fontSize": 20,
@@ -2187,6 +2187,32 @@
             "align": "inside",
             "thickness": 1
           }
+        },
+        {
+          "type": "text",
+          "id": "ZnTR7",
+          "x": 842,
+          "y": 17,
+          "name": "已有 7 位家長支持，目標 50 位",
+          "fill": "#383838ff",
+          "content": "找出卡點",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "dVmy9",
+          "x": 740,
+          "y": 17,
+          "name": "已有 7 位家長支持，目標 50 位",
+          "fill": "#383838ff",
+          "content": "產品概念",
+          "lineHeight": 2,
+          "fontFamily": "Noto Sans",
+          "fontSize": 20,
+          "fontWeight": "500"
         }
       ]
     }
