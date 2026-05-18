@@ -65,6 +65,7 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .hero-progress-label{font-size:.95rem;color:var(--dark2);font-weight:500}
 .hero-progress-bar{width:100%;height:10px;background:#e5e5e5;border-radius:5px;overflow:hidden}
 .hero-progress-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-light,#f2671a));border-radius:5px;width:0%;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
+.hero-hot-text{font-size:.95rem;color:var(--dark2);font-weight:500;margin-top:14px}
 .hero-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:14px 32px;border-radius:32px;font-size:1.22rem;font-weight:500;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all .25s;cursor:pointer;border:none;font-family:var(--sans)}
 .hero-btn:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(233,86,3,0.35)}
 .hero-tagline{position:absolute;right:40px;bottom:40px;z-index:2;background:rgba(255,255,255,0.9);border-radius:17px;padding:16px 38px;font-size:1.275rem;font-weight:500;color:#000}
@@ -451,10 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="hero-progress-label"><strong id="heroSupporterCount" style="color:var(--orange)">0</strong> / 50 位支持</span>
       </div>
       <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroCountFill"></div></div>
-      <div class="hero-progress-row" style="margin-top:14px">
-        <span class="hero-progress-label">募資金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$300,000</span>
-      </div>
-      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroAmountFill"></div></div>
+      <p class="hero-hot-text">目前反應熱烈！市場意向累積已達 <strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong></p>
     </div>
   </div>
   <div class="hero-tagline">科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長</div>
@@ -1677,7 +1675,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const finalSupporterCountEl = document.getElementById('finalSupporterCount');
   const heroTotalAmountEl = document.getElementById('heroTotalAmount');
   const heroCountFillEl = document.getElementById('heroCountFill');
-  const heroAmountFillEl = document.getElementById('heroAmountFill');
 
   function formatCurrency(value) {
     return 'NT$' + Number(value || 0).toLocaleString('zh-TW');
@@ -1711,7 +1708,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCount(finalSupporterCountEl, supporters, 1200);
     animateCount(heroTotalAmountEl, amount, 1500, formatCurrency);
     if (heroCountFillEl) heroCountFillEl.style.width = `${countProgress}%`;
-    if (heroAmountFillEl) heroAmountFillEl.style.width = `${amountProgress}%`;
   }
 
   async function loadCampaignStats() {
