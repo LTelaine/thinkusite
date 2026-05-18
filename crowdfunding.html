@@ -263,6 +263,16 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
 .page-toast.is-show{opacity:1;transform:translateX(-50%) translateY(0)}
 .page-toast.is-error{background:#b42318}
 
+/* ══════ VIDEO MODAL ══════ */
+.video-modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,0.82);display:none;align-items:center;justify-content:center;padding:24px;z-index:10000}
+.video-modal-overlay.is-open{display:flex}
+.video-modal{width:min(1100px,100%);background:#000;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.35);position:relative}
+.video-modal-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.08);color:#fff}
+.video-modal-title{font-size:1rem;font-weight:600;letter-spacing:0.03em}
+.video-modal-close{appearance:none;border:none;width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,0.14);color:#fff;cursor:pointer;font-size:1rem}
+.video-modal-player{position:relative;width:100%;padding-top:56.25%;background:#000}
+.video-modal-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
 /* ══════ MASCOTS ══════ */
 .char-row{display:flex;justify-content:center;align-items:flex-end;gap:20px;margin:20px 0 28px}
 .char-item{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;animation:charSlideIn .8s ease-out forwards}
@@ -341,6 +351,8 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
   .nav-count{display:none}
 }
 @media(max-width:768px){
+  .video-modal-overlay{padding:0;align-items:flex-end}
+  .video-modal{width:100%;border-radius:18px 18px 0 0}
   .nav-mid{display:none}
   /* ── Hero mobile layout ── */
   .hero{min-height:auto;padding-top:70px;display:flex;flex-direction:column;align-items:stretch;gap:12px;background:var(--cream);overflow:visible}
@@ -790,6 +802,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
+<!-- ══════ VIDEO MODAL ══════ -->
+<div id="videoModalOverlay" class="video-modal-overlay" aria-hidden="true">
+  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+    <div class="video-modal-header">
+      <div id="videoModalTitle" class="video-modal-title">產品介紹影片</div>
+      <button type="button" id="videoModalClose" class="video-modal-close" aria-label="關閉影片視窗">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="video-modal-player">
+      <iframe id="videoModalFrame" src="about:blank" title="產品介紹影片" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
 <!-- ══════ SPONSOR MODAL ══════ -->
 <div id="sponsorModalOverlay" class="sponsor-modal-overlay" aria-hidden="true">
   <div class="sponsor-modal" role="dialog" aria-modal="true" aria-labelledby="sponsorModalTitle">
@@ -1011,6 +1038,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastEl = document.getElementById('pageToast');
   const ctaButtons = document.querySelectorAll('.cta-track');
   const heroVideoTrigger = document.getElementById('heroVideoTrigger');
+  const videoModalOverlay = document.getElementById('videoModalOverlay');
+  const videoModalCloseBtn = document.getElementById('videoModalClose');
+  const videoModalTitleEl = document.getElementById('videoModalTitle');
+  const videoModalFrameEl = document.getElementById('videoModalFrame');
   const sponsorModalOverlay = document.getElementById('sponsorModalOverlay');
   const sponsorModalCloseBtn = document.getElementById('sponsorModalClose');
   const sponsorModalCancelBtn = document.getElementById('sponsorModalCancel');
@@ -1229,7 +1260,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setBodyLock() {
-    const hasOpenOverlay = sponsorModalOverlay && sponsorModalOverlay.classList.contains('is-open');
+    const hasOpenOverlay = [videoModalOverlay, sponsorModalOverlay].some(el => el && el.classList.contains('is-open'));
     document.body.style.overflow = hasOpenOverlay ? 'hidden' : '';
   }
 
@@ -1460,13 +1491,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* Video click */
-  if (heroVideoTrigger) {
-    heroVideoTrigger.addEventListener('click', () => {
-      trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
-      window.open(CONFIG.video.desktopUrl, '_blank', 'noopener');
-    });
+  /* Video modal functions */
+  function getVideoUrl(mode) {
+    return (mode === 'mobile' ? CONFIG.video.mobileUrl : CONFIG.video.desktopUrl) || CONFIG.video.desktopUrl || '';
   }
+
+  function isMobileVideoMode() {
+    return getDeviceType() === 'mobile' || window.innerWidth <= CONFIG.video.modalBreakpoint;
+  }
+
+  function toYouTubeEmbedUrl(url) {
+    if (!url) return '';
+    if (url.includes('/embed/')) return url.includes('?') ? `${url}&autoplay=1&rel=0` : `${url}?autoplay=1&rel=0`;
+    const shortMatch = url.match(/youtu\.be\/([^?&/]+)/);
+    if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}?autoplay=1&rel=0`;
+    const longMatch = url.match(/[?&]v=([^?&/]+)/);
+    if (longMatch) return `https://www.youtube.com/embed/${longMatch[1]}?autoplay=1&rel=0`;
+    return url;
+  }
+
+  function openVideoModal(src) {
+    if (!videoModalOverlay || !videoModalFrameEl || !src) return;
+    videoModalTitleEl.textContent = CONFIG.video.title;
+    videoModalFrameEl.src = toYouTubeEmbedUrl(src);
+    videoModalOverlay.classList.add('is-open');
+    videoModalOverlay.setAttribute('aria-hidden', 'false');
+    setBodyLock();
+  }
+
+  function closeVideoModal(trigger = 'manual_close') {
+    if (!videoModalOverlay || !videoModalFrameEl || !videoModalOverlay.classList.contains('is-open')) return;
+    videoModalOverlay.classList.remove('is-open');
+    videoModalOverlay.setAttribute('aria-hidden', 'true');
+    videoModalFrameEl.src = 'about:blank';
+    setBodyLock();
+    trackEvent('video_close', { video_provider: CONFIG.video.provider, video_mode: 'inline_modal', source_section: 'concept', trigger, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true }).catch(() => {});
+  }
+
+  function handleVideoClick() {
+    const mobileMode = isMobileVideoMode();
+    const videoUrl = getVideoUrl(mobileMode ? 'mobile' : 'desktop');
+    if (!videoUrl) { showToast('影片連結尚未設定。', true); return; }
+    trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_mode: mobileMode ? 'external' : 'inline_modal', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
+    if (mobileMode) { window.open(videoUrl, '_blank', 'noopener'); return; }
+    openVideoModal(videoUrl);
+  }
+
+  if (heroVideoTrigger) heroVideoTrigger.addEventListener('click', handleVideoClick);
+  if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', () => closeVideoModal('button_close'));
+  if (videoModalOverlay) videoModalOverlay.addEventListener('click', (e) => { if (e.target === videoModalOverlay) closeVideoModal('overlay_close'); });
 
   /* CTA buttons */
   ctaButtons.forEach((btn) => btn.addEventListener('click', () => handlePlanClick(btn)));
@@ -1481,6 +1554,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Escape key */
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
+    if (videoModalOverlay && videoModalOverlay.classList.contains('is-open')) return closeVideoModal('escape_close');
     if (sponsorModalOverlay && sponsorModalOverlay.classList.contains('is-open')) closeSponsorModal('escape_close');
   });
 
