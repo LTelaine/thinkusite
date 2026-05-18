@@ -1491,13 +1491,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* Video click — open YouTube in new tab */
-  if (heroVideoTrigger) {
-    heroVideoTrigger.addEventListener('click', () => {
-      trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
-      window.open(CONFIG.video.desktopUrl, '_blank', 'noopener');
-    });
+  /* Video modal functions */
+  function toYouTubeEmbedUrl(url) {
+    if (!url) return '';
+    if (url.includes('/embed/')) return url.includes('?') ? `${url}&autoplay=1&rel=0` : `${url}?autoplay=1&rel=0`;
+    const shortMatch = url.match(/youtu\.be\/([^?&/]+)/);
+    if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}?autoplay=1&rel=0`;
+    const longMatch = url.match(/[?&]v=([^?&/]+)/);
+    if (longMatch) return `https://www.youtube.com/embed/${longMatch[1]}?autoplay=1&rel=0`;
+    return url;
   }
+
+  function openVideoModal(src) {
+    if (!videoModalOverlay || !videoModalFrameEl || !src) return;
+    videoModalTitleEl.textContent = CONFIG.video.title;
+    videoModalFrameEl.src = toYouTubeEmbedUrl(src);
+    videoModalOverlay.classList.add('is-open');
+    videoModalOverlay.setAttribute('aria-hidden', 'false');
+    setBodyLock();
+  }
+
+  function closeVideoModal(trigger = 'manual_close') {
+    if (!videoModalOverlay || !videoModalFrameEl || !videoModalOverlay.classList.contains('is-open')) return;
+    videoModalOverlay.classList.remove('is-open');
+    videoModalOverlay.setAttribute('aria-hidden', 'true');
+    videoModalFrameEl.src = 'about:blank';
+    setBodyLock();
+    trackEvent('video_close', { video_provider: CONFIG.video.provider, video_mode: 'inline_modal', source_section: 'concept', trigger, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true }).catch(() => {});
+  }
+
+  function handleVideoClick() {
+    const mobileMode = getDeviceType() === 'mobile' || window.innerWidth <= CONFIG.video.modalBreakpoint;
+    const videoUrl = CONFIG.video.desktopUrl;
+    if (!videoUrl) { showToast('影片連結尚未設定。', true); return; }
+    trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_mode: mobileMode ? 'external' : 'inline_modal', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
+    if (mobileMode) { window.open(videoUrl, '_blank', 'noopener'); return; }
+    openVideoModal(videoUrl);
+  }
+
+  if (heroVideoTrigger) heroVideoTrigger.addEventListener('click', handleVideoClick);
+  if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', () => closeVideoModal('button_close'));
+  if (videoModalOverlay) videoModalOverlay.addEventListener('click', (e) => { if (e.target === videoModalOverlay) closeVideoModal('overlay_close'); });
 
   /* CTA buttons */
   ctaButtons.forEach((btn) => btn.addEventListener('click', () => handlePlanClick(btn)));
