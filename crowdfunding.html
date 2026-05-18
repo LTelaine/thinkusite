@@ -60,7 +60,11 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .hero h1{font-family:var(--serif);font-size:clamp(1.52rem,3.2vw,2.975rem);font-weight:900;line-height:1.4;margin-bottom:32px;max-width:600px}
 .hero-sub{font-size:clamp(0.88rem,1.3vw,1.275rem);color:var(--dark2);line-height:1.67;margin-bottom:40px;max-width:573px;font-weight:500}
 .hero-disclaimer{color:var(--orange);font-size:0.9rem;font-weight:500;margin-bottom:12px;line-height:2.5}
-.hero-count{color:#383838;font-size:1.063rem;font-weight:500;line-height:2;margin-bottom:32px}
+.hero-count{color:#383838;font-size:1.063rem;font-weight:500;line-height:2;margin-bottom:12px}
+.hero-progress-wrap{margin-bottom:32px;max-width:400px}
+.hero-progress-bar{width:100%;height:10px;background:#e5e5e5;border-radius:5px;overflow:hidden}
+.hero-progress-fill{height:100%;background:var(--orange);border-radius:5px;width:0%;transition:width .8s ease}
+.hero-progress-text{font-size:.9rem;color:var(--gray);margin-top:8px;font-weight:500}
 .hero-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:14px 32px;border-radius:32px;font-size:1.22rem;font-weight:500;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all .25s;cursor:pointer;border:none;font-family:var(--sans)}
 .hero-btn:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(233,86,3,0.35)}
 .hero-tagline{position:absolute;right:40px;bottom:40px;z-index:2;background:rgba(255,255,255,0.9);border-radius:17px;padding:16px 38px;font-size:1.275rem;font-weight:500;color:#000}
@@ -69,8 +73,8 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .concept{padding:100px 24px 60px;text-align:center;background:#fff}
 .concept-eyebrow{font-size:1.012rem;font-weight:500;color:#000;margin-bottom:8px}
 .concept h2{font-family:var(--serif);font-size:2.01rem;font-weight:700;color:#000;margin-bottom:40px}
-.video-box{max-width:952px;margin:0 auto;background:#000;border-radius:43px;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative}
-.video-box video{width:100%;display:block}
+.video-box{max-width:952px;margin:0 auto;background:#000;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative}
+.video-box video{width:100%;aspect-ratio:16/9;display:block;object-fit:contain;background:#000}
 
 /* ══════ TEAM QUOTE ══════ */
 .quote-section{padding:0 24px;text-align:center;background:transparent;margin-top:-50px;position:relative;z-index:2}
@@ -216,7 +220,7 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
 /* ══════ MODAL ══════ */
 .sponsor-modal-overlay{position:fixed;inset:0;background:rgba(24,35,41,0.62);display:none;align-items:center;justify-content:center;padding:24px;z-index:9998}
 .sponsor-modal-overlay.is-open{display:flex}
-.sponsor-modal{width:min(760px,100%);max-height:min(92vh,900px);overflow:auto;background:#fff;border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,.22);position:relative}
+.sponsor-modal{width:min(620px,100%);max-height:min(92vh,900px);overflow:auto;background:#fff;border-radius:22px;box-shadow:0 24px 80px rgba(0,0,0,.22);position:relative}
 .sponsor-modal-header{padding:28px 30px 18px;border-bottom:1px solid #eef2f4;background:linear-gradient(135deg,#f8fbff 0%,#fff9f0 100%)}
 .sponsor-modal-title{font-size:1.55rem;font-weight:700;color:#182329;margin-bottom:8px}
 .sponsor-modal-subtitle{font-size:.95rem;color:#667085}
@@ -282,7 +286,7 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
 .fi{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
 .fi.vis{opacity:1;transform:translateY(0)}
 @media(min-width:1366px){
-  .sponsor-modal{width:min(80vw,100%)}
+  .sponsor-modal{width:min(620px,100%)}
   .nc-circle{opacity:0;transform:translateY(40px);transition:opacity .5s ease,transform .5s ease}
   .nc-circle.nc-stagger-vis{opacity:1;transform:translateY(0)}
 }
@@ -348,6 +352,7 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
   .hero-btn{font-size:1.2rem;padding:18px 24px;width:100%;justify-content:center;border-radius:12px;margin-bottom:0}
   .hero-disclaimer{text-align:center}
   .hero-count{text-align:center}
+  .hero-progress-wrap{margin-left:auto;margin-right:auto}
   .hero-tagline{position:relative;right:auto;bottom:auto;z-index:auto;margin:0 12px 16px;text-align:center;font-size:0.9rem;padding:14px 20px;display:block;border-radius:50px;width:auto}
   .video-box{border-radius:20px}
   .concept{padding:60px 20px 40px}
@@ -410,7 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#faq">常見問答</a>
   </div>
   <div class="nav-right">
-    <span class="nav-count">已有 <strong style="color:var(--orange)">7</strong> 位家長支持</span>
+    <span class="nav-count">已有 <strong style="color:var(--orange)" id="navSupporterCount">-</strong> 位家長支持</span>
     <a href="#plans" class="nav-cta">立即贊助</a>
   </div>
 </nav>
@@ -429,7 +434,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       支持這個計畫 <svg width="20" height="16" viewBox="0 0 25 21" fill="none"><path d="M1 10.5h22M16 4.5l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <p class="hero-disclaimer">這是概念驗證市調，支持不會實際扣款</p>
-    <p class="hero-count">已有 7 位家長支持，目標 50 位</p>
+    <p class="hero-count">已有 <strong id="heroSupporterCount" style="color:var(--orange)">-</strong> 位家長支持，目標 50 位</p>
+    <div class="hero-progress-wrap">
+      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
+      <p class="hero-progress-text">募資達標金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$74,500</p>
+    </div>
   </div>
   <div class="hero-tagline">科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長</div>
 </section>
@@ -683,9 +692,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>您的每一份支持，都在推動這個產品更快實現</p>
   </div>
   <div class="steps">
-    <div class="step"><div class="step-n">1</div><h4>選擇方案</h4><p>填寫支持意願，不會實際扣款</p></div>
-    <div class="step"><div class="step-n">2</div><h4>達到 50 位支持者</h4><p>啟動正式開發，您將優先獲得試用資格</p></div>
-    <div class="step"><div class="step-n">3</div><h4>正式上線</h4><p>以早鳥價格優先體驗完整功能</p></div>
+    <div class="step"><div class="step-n">1</div><h4>選擇方案</h4><p>填寫支持意願，<br>不會實際扣款</p></div>
+    <div class="step"><div class="step-n">2</div><h4>達到 50 位支持者</h4><p>啟動正式開發，<br>您將優先獲得試用資格</p></div>
+    <div class="step"><div class="step-n">3</div><h4>正式上線</h4><p>以早鳥價格<br>優先體驗完整功能</p></div>
   </div>
 </section>
 
@@ -695,7 +704,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="faq-list">
     <div class="faq-i rv">
       <button class="faq-q">這是真的要付錢嗎？</button>
-      <div class="faq-a"><div class="faq-a-in">不是。目前這是概念驗證市調階段，按下支持後系統只會記錄您選擇的方案與填寫的資料到 Google Sheet，不會有任何實際扣款。您的支持代表您有意願在正式推出時優先購買。</div></div>
+      <div class="faq-a"><div class="faq-a-in">不是。目前這是概念驗證市調階段，按下支持後系統只會記錄您選擇的方案與填寫的資料，不會有任何實際扣款。您的支持代表您有意願在正式推出時優先購買。</div></div>
     </div>
     <div class="faq-i rv">
       <button class="faq-q">ThinkU 跟補習班有什麼不同？</button>
@@ -750,7 +759,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <a href="#plans" class="btn-final">立即支持 →</a>
-  <p class="f-prog">已有 <strong>7</strong> 位家長支持，目標 50 位</p>
+  <p class="f-prog">已有 <strong id="finalSupporterCount">-</strong> 位家長支持，目標 50 位</p>
   <p class="f-note">⚠ 支持不會實際扣款</p>
 </section>
 
@@ -789,7 +798,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
     <div class="sponsor-modal-header">
       <div id="sponsorModalTitle" class="sponsor-modal-title">完成贊助資料填寫</div>
-      <div class="sponsor-modal-subtitle">請留下贊助者資料，並完成模擬付款。這個版本會把資料正式寫入 Google Sheet。</div>
+      <div class="sponsor-modal-subtitle">請留下贊助者資料，並完成模擬付款。我們會妥善收集並保管您的資料。</div>
     </div>
     <div class="sponsor-modal-body">
       <div class="sponsor-plan-summary">
@@ -923,7 +932,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <option value="line_pay">LINE Pay</option>
               <option value="apple_pay">Apple Pay</option>
             </select>
-            <div class="sponsor-form-help">這裡先做假付款流程，提交後直接視為付款成功並寫入 Google Sheet。</div>
+            <div class="sponsor-form-help">這裡先做模擬付款流程，提交後直接視為付款成功。</div>
           </div>
           <div class="sponsor-form-group">
             <label for="invoiceType">發票需求</label>
@@ -941,7 +950,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="sponsor-form-group is-full">
             <div class="fake-payment-box">
               <div class="fake-payment-title"><i class="fa-solid fa-circle-info"></i> 模擬付款說明</div>
-              <div class="fake-payment-note">目前此頁為驗證用募資頁，按下送出後不會真的扣款；系統只會把贊助方案與贊助者資料記錄到 Google Sheet，並立即回寫頁首募資統計。</div>
+              <div class="fake-payment-note">目前此頁為驗證用募資頁，按下送出後不會真的扣款；系統只會記錄您的贊助方案與資料，並即時更新頁首募資統計。</div>
             </div>
           </div>
           <div class="sponsor-form-group is-full">
@@ -1407,12 +1416,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const result = await callApi('create_sponsorship', payload, 'POST');
-      setModalMessage('success', '已完成模擬付款，資料已寫入 Google Sheet。');
+      setModalMessage('success', '已完成模擬付款，資料已成功送出。');
       pushEvent('sponsorship_success', buildEventPayload('sponsorship_success', {
         plan_id: payload.plan_id, plan_name: payload.plan_name, amount: payload.amount,
         order_id: payload.order_id, payment_method: payload.payment_method,
         source_page: 'crowdfunding', time_on_page_ms: payload.time_on_page_ms
       }));
+      if (result && result.data) {
+        applyCampaignStats(result.data);
+      } else {
+        await loadCampaignStats();
+      }
       window.setTimeout(() => { closeSponsorModal('success'); showToast('贊助資料已送出，頁面統計已更新。'); }, 900);
     } catch (err) {
       console.error('create_sponsorship error:', err);
@@ -1577,6 +1591,42 @@ document.addEventListener('DOMContentLoaded', () => {
       selected_plan_name: getPersistedState().selected_plan_name || ''
     }), true);
   });
+
+  /* Fetch and update supporter stats (aligned with original.html logic) */
+  const navSupporterCountEl = document.getElementById('navSupporterCount');
+  const heroSupporterCountEl = document.getElementById('heroSupporterCount');
+  const finalSupporterCountEl = document.getElementById('finalSupporterCount');
+  const heroTotalAmountEl = document.getElementById('heroTotalAmount');
+  const heroProgressFillEl = document.getElementById('heroProgressFill');
+
+  function formatCurrency(value) {
+    return 'NT$' + Number(value || 0).toLocaleString('zh-TW');
+  }
+
+  function applyCampaignStats(data = {}) {
+    const amount = Number(data.funded_amount || 0);
+    const target = Number(data.target_amount || 74500);
+    const supporters = Number(data.supporters || 0);
+    const progress = target > 0 ? Math.max(0, Math.round((amount / target) * 100)) : 0;
+
+    if (navSupporterCountEl) navSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
+    if (heroSupporterCountEl) heroSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
+    if (finalSupporterCountEl) finalSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
+    if (heroTotalAmountEl) heroTotalAmountEl.textContent = formatCurrency(amount);
+    if (heroProgressFillEl) heroProgressFillEl.style.width = `${Math.min(progress, 100)}%`;
+  }
+
+  async function loadCampaignStats() {
+    try {
+      const result = await callApi('get_campaign_stats', { page_key: CONFIG.pageKey }, 'GET');
+      if (result && result.data) applyCampaignStats(result.data);
+    } catch (err) {
+      console.warn('讀取募資統計失敗：', err);
+      trackEvent('campaign_stats_load_error', { message: err.message || 'load failed', time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true }).catch(() => {});
+    }
+  }
+
+  loadCampaignStats();
 
   /* Init */
   persistLandingContext();
