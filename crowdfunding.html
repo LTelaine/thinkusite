@@ -450,10 +450,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="hero-disclaimer">這是概念驗證市調，支持不會實際扣款</p>
     <div class="hero-progress-wrap">
       <div class="hero-progress-row">
-        <span class="hero-progress-label">已有 <strong id="heroSupporterCount" style="color:var(--orange)">0</strong> 位家長支持贊助（首波目標 <strong style="color:var(--orange)">50</strong> 位）</span>
+        <span class="hero-progress-label">目前已集資 <strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / 目標 <strong style="color:var(--orange)">NT$300,000</strong></span>
       </div>
-      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroCountFill"></div></div>
-      <p class="hero-hot-text">反應超乎預期！意向金額達 <strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong>！<br>（目標 <strong style="color:var(--orange)">NT$300,000</strong>）<br>一同為孩子解鎖全新考試策略。</p>
+      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroAmountFill"></div></div>
+      <p class="hero-hot-text">已有 <strong id="heroSupporterCount" style="color:var(--orange)">0</strong> 位家長加入，一同為孩子解鎖全新考試策略。</p>
     </div>
   </div>
   <div class="hero-tagline">科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長</div>
@@ -1676,7 +1676,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSupporterCountEl = document.getElementById('heroSupporterCount');
   const finalSupporterCountEl = document.getElementById('finalSupporterCount');
   const heroTotalAmountEl = document.getElementById('heroTotalAmount');
-  const heroCountFillEl = document.getElementById('heroCountFill');
+  const heroAmountFillEl = document.getElementById('heroAmountFill');
 
   function formatCurrency(value) {
     return 'NT$' + Number(value || 0).toLocaleString('zh-TW');
@@ -1701,15 +1701,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const amount = Number(data.funded_amount || 0);
     const target = Number(data.target_amount || 300000);
     const supporters = Number(data.supporters || 0);
-    const countGoal = 50;
-    const countProgress = Math.min(Math.round((supporters / countGoal) * 100), 100);
     const amountProgress = target > 0 ? Math.min(Math.round((amount / target) * 100), 100) : 0;
 
     animateCount(navSupporterCountEl, supporters, 1200);
     animateCount(heroSupporterCountEl, supporters, 1200);
     animateCount(finalSupporterCountEl, supporters, 1200);
     animateCount(heroTotalAmountEl, amount, 1500, formatCurrency);
-    if (heroCountFillEl) heroCountFillEl.style.width = `${countProgress}%`;
+    if (heroAmountFillEl) heroAmountFillEl.style.width = `${amountProgress}%`;
   }
 
   async function loadCampaignStats() {
