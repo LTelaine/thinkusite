@@ -73,8 +73,9 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .concept{padding:100px 24px 60px;text-align:center;background:#fff}
 .concept-eyebrow{font-size:1.012rem;font-weight:500;color:#000;margin-bottom:8px}
 .concept h2{font-family:var(--serif);font-size:2.01rem;font-weight:700;color:#000;margin-bottom:40px}
-.video-box{max-width:952px;margin:0 auto;aspect-ratio:16/9;background:#000;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative}
-.video-box iframe{width:100%;height:100%;display:block}
+.video-box{max-width:952px;margin:0 auto;aspect-ratio:16/9;background:#000 url('image/img-video.png') center/cover no-repeat;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative;cursor:pointer}
+.play-btn{width:102px;height:102px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s;z-index:1}
+.play-btn:hover{transform:scale(1.08)}
 
 /* ══════ TEAM QUOTE ══════ */
 .quote-section{padding:0 24px;text-align:center;background:transparent;margin-top:-50px;position:relative;z-index:2}
@@ -459,8 +460,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="concept rv">
   <p class="concept-eyebrow">孩子卡住的那個點，我們找到了</p>
   <h2>產品概念</h2>
-  <div class="video-box">
-    <iframe src="https://www.youtube.com/embed/kO_k2wgUToQ?rel=0" title="ThinkU 產品介紹" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="video-box" id="heroVideoTrigger">
+    <div class="play-btn">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+    </div>
   </div>
 </section>
 
@@ -1488,55 +1491,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* Video modal functions */
-  function getVideoUrl(mode) {
-    return (mode === 'mobile' ? CONFIG.video.mobileUrl : CONFIG.video.desktopUrl) || CONFIG.video.desktopUrl || '';
+  /* Video click — open YouTube in new tab */
+  if (heroVideoTrigger) {
+    heroVideoTrigger.addEventListener('click', () => {
+      trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
+      window.open(CONFIG.video.desktopUrl, '_blank', 'noopener');
+    });
   }
-
-  function isMobileVideoMode() {
-    return getDeviceType() === 'mobile' || window.innerWidth <= CONFIG.video.modalBreakpoint;
-  }
-
-  function toYouTubeEmbedUrl(url) {
-    if (!url) return '';
-    if (url.includes('/embed/')) return url.includes('?') ? `${url}&autoplay=1&rel=0` : `${url}?autoplay=1&rel=0`;
-    const shortMatch = url.match(/youtu\.be\/([^?&/]+)/);
-    if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}?autoplay=1&rel=0`;
-    const longMatch = url.match(/[?&]v=([^?&/]+)/);
-    if (longMatch) return `https://www.youtube.com/embed/${longMatch[1]}?autoplay=1&rel=0`;
-    return url;
-  }
-
-  function openVideoModal(src) {
-    if (!videoModalOverlay || !videoModalFrameEl || !src) return;
-    videoModalTitleEl.textContent = CONFIG.video.title;
-    videoModalFrameEl.src = toYouTubeEmbedUrl(src);
-    videoModalOverlay.classList.add('is-open');
-    videoModalOverlay.setAttribute('aria-hidden', 'false');
-    setBodyLock();
-  }
-
-  function closeVideoModal(trigger = 'manual_close') {
-    if (!videoModalOverlay || !videoModalFrameEl || !videoModalOverlay.classList.contains('is-open')) return;
-    videoModalOverlay.classList.remove('is-open');
-    videoModalOverlay.setAttribute('aria-hidden', 'true');
-    videoModalFrameEl.src = 'about:blank';
-    setBodyLock();
-    trackEvent('video_close', { video_provider: CONFIG.video.provider, video_mode: 'inline_modal', source_section: 'concept', trigger, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true }).catch(() => {});
-  }
-
-  function handleVideoClick() {
-    const mobileMode = isMobileVideoMode();
-    const videoUrl = getVideoUrl(mobileMode ? 'mobile' : 'desktop');
-    if (!videoUrl) { showToast('影片連結尚未設定。', true); return; }
-    trackEvent('video_cta_click', { video_provider: CONFIG.video.provider, source_section: 'concept', video_mode: mobileMode ? 'external' : 'inline_modal', video_title: CONFIG.video.title, time_on_page_ms: Date.now() - pageEnteredAt }, { pushToDataLayer: true, logToSheet: true });
-    if (mobileMode) { window.open(videoUrl, '_blank', 'noopener'); return; }
-    openVideoModal(videoUrl);
-  }
-
-  if (heroVideoTrigger) heroVideoTrigger.addEventListener('click', handleVideoClick);
-  if (videoModalCloseBtn) videoModalCloseBtn.addEventListener('click', () => closeVideoModal('button_close'));
-  if (videoModalOverlay) videoModalOverlay.addEventListener('click', (e) => { if (e.target === videoModalOverlay) closeVideoModal('overlay_close'); });
 
   /* CTA buttons */
   ctaButtons.forEach((btn) => btn.addEventListener('click', () => handlePlanClick(btn)));
