@@ -73,9 +73,8 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .concept{padding:100px 24px 60px;text-align:center;background:#fff}
 .concept-eyebrow{font-size:1.012rem;font-weight:500;color:#000;margin-bottom:8px}
 .concept h2{font-family:var(--serif);font-size:2.01rem;font-weight:700;color:#000;margin-bottom:40px}
-.video-box{max-width:952px;margin:0 auto;aspect-ratio:16/9;background:#000 url('image/img-video.png') center/cover no-repeat;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative;cursor:pointer}
-.play-btn{width:102px;height:102px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s;z-index:1}
-.play-btn:hover{transform:scale(1.08)}
+.video-box{max-width:952px;margin:0 auto;aspect-ratio:16/9;background:#000;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);overflow:hidden;position:relative}
+.video-box iframe{width:100%;height:100%;display:block}
 
 /* ══════ TEAM QUOTE ══════ */
 .quote-section{padding:0 24px;text-align:center;background:transparent;margin-top:-50px;position:relative;z-index:2}
@@ -460,10 +459,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="concept rv">
   <p class="concept-eyebrow">孩子卡住的那個點，我們找到了</p>
   <h2>產品概念</h2>
-  <div class="video-box" id="heroVideoTrigger">
-    <div class="play-btn">
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-    </div>
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/kO_k2wgUToQ?rel=0" title="ThinkU 產品介紹" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </section>
 
