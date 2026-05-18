@@ -63,7 +63,7 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .hero-count{color:#383838;font-size:1.063rem;font-weight:500;line-height:2;margin-bottom:12px}
 .hero-progress-wrap{margin-bottom:32px;max-width:400px}
 .hero-progress-bar{width:100%;height:10px;background:#e5e5e5;border-radius:5px;overflow:hidden}
-.hero-progress-fill{height:100%;background:var(--orange);border-radius:5px;width:0%;transition:width .8s ease}
+.hero-progress-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-light,#f2671a));border-radius:5px;width:0%;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
 .hero-progress-text{font-size:.9rem;color:var(--gray);margin-top:8px;font-weight:500}
 .hero-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:14px 32px;border-radius:32px;font-size:1.22rem;font-weight:500;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all .25s;cursor:pointer;border:none;font-family:var(--sans)}
 .hero-btn:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(233,86,3,0.35)}
@@ -450,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="hero-count">已有 <strong id="heroSupporterCount" style="color:var(--orange)">-</strong> 位家長支持，目標 50 位</p>
     <div class="hero-progress-wrap">
       <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
-      <p class="hero-progress-text">募資達標金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$74,500</p>
+      <p class="hero-progress-text">募資達標金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$300,000</p>
     </div>
   </div>
   <div class="hero-tagline">科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長</div>
@@ -1678,16 +1678,31 @@ document.addEventListener('DOMContentLoaded', () => {
     return 'NT$' + Number(value || 0).toLocaleString('zh-TW');
   }
 
+  function animateCount(el, target, duration, formatter) {
+    if (!el) return;
+    const start = 0;
+    const startTime = performance.now();
+    function tick(now) {
+      const elapsed = now - startTime;
+      const ratio = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - ratio, 3);
+      const current = Math.round(start + (target - start) * eased);
+      el.textContent = formatter ? formatter(current) : current.toLocaleString('zh-TW');
+      if (ratio < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   function applyCampaignStats(data = {}) {
     const amount = Number(data.funded_amount || 0);
-    const target = Number(data.target_amount || 74500);
+    const target = Number(data.target_amount || 300000);
     const supporters = Number(data.supporters || 0);
     const progress = target > 0 ? Math.max(0, Math.round((amount / target) * 100)) : 0;
 
-    if (navSupporterCountEl) navSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
-    if (heroSupporterCountEl) heroSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
-    if (finalSupporterCountEl) finalSupporterCountEl.textContent = supporters.toLocaleString('zh-TW');
-    if (heroTotalAmountEl) heroTotalAmountEl.textContent = formatCurrency(amount);
+    animateCount(navSupporterCountEl, supporters, 1200);
+    animateCount(heroSupporterCountEl, supporters, 1200);
+    animateCount(finalSupporterCountEl, supporters, 1200);
+    animateCount(heroTotalAmountEl, amount, 1500, formatCurrency);
     if (heroProgressFillEl) heroProgressFillEl.style.width = `${Math.min(progress, 100)}%`;
   }
 
