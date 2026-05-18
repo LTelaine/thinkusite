@@ -60,11 +60,11 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 .hero h1{font-family:var(--serif);font-size:clamp(1.52rem,3.2vw,2.975rem);font-weight:900;line-height:1.4;margin-bottom:32px;max-width:600px}
 .hero-sub{font-size:clamp(0.88rem,1.3vw,1.275rem);color:var(--dark2);line-height:1.67;margin-bottom:40px;max-width:573px;font-weight:500}
 .hero-disclaimer{color:var(--orange);font-size:0.9rem;font-weight:500;margin-bottom:12px;line-height:2.5}
-.hero-count{color:#383838;font-size:1.063rem;font-weight:500;line-height:2;margin-bottom:12px}
-.hero-progress-wrap{margin-bottom:32px;max-width:400px}
+.hero-progress-wrap{margin-bottom:32px;max-width:420px}
+.hero-progress-row{margin-bottom:6px}
+.hero-progress-label{font-size:.95rem;color:var(--dark2);font-weight:500}
 .hero-progress-bar{width:100%;height:10px;background:#e5e5e5;border-radius:5px;overflow:hidden}
 .hero-progress-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-light,#f2671a));border-radius:5px;width:0%;transition:width 1.5s cubic-bezier(.4,0,.2,1)}
-.hero-progress-text{font-size:.9rem;color:var(--gray);margin-top:8px;font-weight:500}
 .hero-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;padding:14px 32px;border-radius:32px;font-size:1.22rem;font-weight:500;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all .25s;cursor:pointer;border:none;font-family:var(--sans)}
 .hero-btn:hover{background:var(--orange-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(233,86,3,0.35)}
 .hero-tagline{position:absolute;right:40px;bottom:40px;z-index:2;background:rgba(255,255,255,0.9);border-radius:17px;padding:16px 38px;font-size:1.275rem;font-weight:500;color:#000}
@@ -364,7 +364,6 @@ footer .fb{color:rgba(255,255,255,.75);font-weight:700;font-size:1.012rem;margin
   .hero-sub{font-size:0.95rem;text-align:center;max-width:100%;margin-bottom:28px}
   .hero-btn{font-size:1.2rem;padding:18px 24px;width:100%;justify-content:center;border-radius:12px;margin-bottom:0}
   .hero-disclaimer{text-align:center}
-  .hero-count{text-align:center}
   .hero-progress-wrap{margin-left:auto;margin-right:auto}
   .hero-tagline{position:relative;right:auto;bottom:auto;z-index:auto;margin:0 12px 16px;text-align:center;font-size:0.9rem;padding:14px 20px;display:block;border-radius:50px;width:auto}
   .video-box{border-radius:20px}
@@ -447,10 +446,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       支持這個計畫 <svg width="20" height="16" viewBox="0 0 25 21" fill="none"><path d="M1 10.5h22M16 4.5l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <p class="hero-disclaimer">這是概念驗證市調，支持不會實際扣款</p>
-    <p class="hero-count">已有 <strong id="heroSupporterCount" style="color:var(--orange)">-</strong> 位家長支持，目標 50 位</p>
     <div class="hero-progress-wrap">
-      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
-      <p class="hero-progress-text">募資達標金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$300,000</p>
+      <div class="hero-progress-row">
+        <span class="hero-progress-label"><strong id="heroSupporterCount" style="color:var(--orange)">0</strong> / 50 位支持</span>
+      </div>
+      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroCountFill"></div></div>
+      <div class="hero-progress-row" style="margin-top:14px">
+        <span class="hero-progress-label">募資金額：<strong id="heroTotalAmount" style="color:var(--orange)">NT$0</strong> / NT$300,000</span>
+      </div>
+      <div class="hero-progress-bar"><div class="hero-progress-fill" id="heroAmountFill"></div></div>
     </div>
   </div>
   <div class="hero-tagline">科學診斷 ｜ 精準教學 ｜ 成效追蹤 ｜ 陪伴成長</div>
@@ -1672,7 +1676,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSupporterCountEl = document.getElementById('heroSupporterCount');
   const finalSupporterCountEl = document.getElementById('finalSupporterCount');
   const heroTotalAmountEl = document.getElementById('heroTotalAmount');
-  const heroProgressFillEl = document.getElementById('heroProgressFill');
+  const heroCountFillEl = document.getElementById('heroCountFill');
+  const heroAmountFillEl = document.getElementById('heroAmountFill');
 
   function formatCurrency(value) {
     return 'NT$' + Number(value || 0).toLocaleString('zh-TW');
@@ -1697,13 +1702,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const amount = Number(data.funded_amount || 0);
     const target = Number(data.target_amount || 300000);
     const supporters = Number(data.supporters || 0);
-    const progress = target > 0 ? Math.max(0, Math.round((amount / target) * 100)) : 0;
+    const countGoal = 50;
+    const countProgress = Math.min(Math.round((supporters / countGoal) * 100), 100);
+    const amountProgress = target > 0 ? Math.min(Math.round((amount / target) * 100), 100) : 0;
 
     animateCount(navSupporterCountEl, supporters, 1200);
     animateCount(heroSupporterCountEl, supporters, 1200);
     animateCount(finalSupporterCountEl, supporters, 1200);
     animateCount(heroTotalAmountEl, amount, 1500, formatCurrency);
-    if (heroProgressFillEl) heroProgressFillEl.style.width = `${Math.min(progress, 100)}%`;
+    if (heroCountFillEl) heroCountFillEl.style.width = `${countProgress}%`;
+    if (heroAmountFillEl) heroAmountFillEl.style.width = `${amountProgress}%`;
   }
 
   async function loadCampaignStats() {
