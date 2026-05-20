@@ -41,7 +41,9 @@ body{font-family:var(--sans);color:var(--dark);background:var(--cream);line-heig
 
 /* ══════ NAV ══════ */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:70px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 3.5px rgba(0,0,0,0.05)}
-.nav-logo{height:46px;width:140px;object-fit:contain}
+.nav-logo-link{display:flex;align-items:center}
+.nav-logo{height:46px;width:140px;object-fit:contain;cursor:pointer;transition:opacity .2s}
+.nav-logo:hover{opacity:.8}
 .nav-mid{display:flex;align-items:center;gap:28px;margin-left:10%}
 .nav-mid a{color:var(--dark3);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s;white-space:nowrap}
 .nav-mid a:hover{color:var(--orange)}
@@ -421,7 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ══════ NAV ══════ -->
 <nav class="nav" id="nav">
-  <img src="image/ThinkU_Logo.png" alt="ThinkU" class="nav-logo">
+  <a href="#" class="nav-logo-link" id="navLogoLink"><img src="image/ThinkU_Logo.png" alt="ThinkU" class="nav-logo"></a>
   <div class="nav-mid">
     <a href="#principles">產品理念</a>
     <a href="#nochase">找出卡點</a>
@@ -1571,6 +1573,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   })();
   window.addEventListener('scroll', throttledScroll, { passive: true });
+
+  /* Logo scroll-to-top */
+  const navLogoLink = document.getElementById('navLogoLink');
+  if (navLogoLink) {
+    navLogoLink.addEventListener('click', (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
 
   /* Scroll-to-top */
   const scrollTopBtn = document.getElementById('scrollTopBtn');
