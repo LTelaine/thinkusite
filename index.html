@@ -1554,7 +1554,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Modal close */
   [sponsorModalCloseBtn, sponsorModalCancelBtn].forEach((el) => el && el.addEventListener('click', () => closeSponsorModal('button_close')));
-  if (sponsorModalOverlay) sponsorModalOverlay.addEventListener('click', (e) => { if (e.target === sponsorModalOverlay) closeSponsorModal('overlay_close'); });
+  /* Disable overlay click-to-close for sponsor modal to prevent accidental form data loss */
 
   /* Form submit */
   if (sponsorForm) sponsorForm.addEventListener('submit', submitSponsorshipForm);
